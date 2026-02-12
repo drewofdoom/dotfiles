@@ -1,0 +1,40 @@
+### Source global definitions
+[[ -f /etc/zhsrc ]] && source /etc/zshrc
+
+### User specific environment
+[[ ! $PATH == "$HOME/.local/bin:$HOME/bin:"* ]] && PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+[[ -d $HOME/.cargo/bin ]] && PATH="$HOME/.cargo/bin:$PATH"
+export PATH
+
+### User specific aliases and functions
+[[ -d ~/.zshrc.d ]] && source ~/.zshrc.d/*(.)
+
+### History
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt SHARE_HISTORY
+
+### Key binds
+# Delete
+bindkey "^[[3~" delete-char
+# CTRL+Arrow
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+# Home and End
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
+### Aliases
+alias zed="flatpak run dev.zed.Zed"
+[[ -f $HOME/.cargo/bin/cpx ]] && alias cp=$HOME/.cargo/bin/cpx
+
+### Pager
+export MANPAGER="bat -plman"
+
+### zsh plugins
+[[ -f /home/linuxbrew/.linuxbrew/bin/atuin ]] && eval "$(atuin init zsh)"
+
+### bling.sh source start
+test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
+### bling.sh source end

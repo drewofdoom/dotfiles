@@ -1,0 +1,7 @@
+# .zprofile
+
+# Export shell
+export SHELL=/usr/bin/zsh
+
+# Get the aliases and functions
+[[ -f ~/.zshrc ]] && source ~/.zshrc

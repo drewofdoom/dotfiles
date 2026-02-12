@@ -1,0 +1,54 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+    for rc in ~/.bashrc.d/*; do
+        if [ -f "$rc" ]; then
+            . "$rc"
+        fi
+    done
+fi
+unset rc
+
+# Applications
+if [ -f /home/linuxbrew/.linuxbrew/bin/atuin ];
+    then eval "$(atuin init bash)"
+fi
+
+# Aliases
+alias zed="flatpak run dev.zed.Zed"
+
+# Variable exports
+# Winboat
+export FREERDP_PLATFORM=wayland
+
+# WINE
+export WINELOADER=/var/home/drew/.var/app/com.usebottles.bottles/data/bottles/runners/kron4ek-wine-11.1-staging-tkg-amd64/bin/wine
+export WINEDEBUG=-all
+export WINEFSYNC=1
+
+# XDG
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+# Pager
+export MANPAGER="bat -plman"
+
+### bling.sh source start
+test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
+### bling.sh source end
