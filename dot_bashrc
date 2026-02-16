@@ -24,30 +24,26 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-# Applications
-if [ -f /home/linuxbrew/.linuxbrew/bin/atuin ];
-    then eval "$(atuin init bash)"
+### Applications
+
+# ble.sh
+if [ -f ~/.local/share/blesh/ble.sh ]; then
+    source -- ~/.local/share/blesh/ble.sh
+fi
+
+# atuin
+if [ -f /home/linuxbrew/.linuxbrew/bin/atuin ]; then
+    eval "$(atuin init bash)"
 fi
 
 # Aliases
-alias zed="flatpak run dev.zed.Zed"
+if [ -f $HOME/.cargo/bin/cpx ]; then
+    alias cp="$HOME/.cargo/bin/cpx"
+fi
 
-# Variable exports
-# Winboat
-export FREERDP_PLATFORM=wayland
-
-# WINE
-export WINELOADER=/var/home/drew/.var/app/com.usebottles.bottles/data/bottles/runners/kron4ek-wine-11.1-staging-tkg-amd64/bin/wine
-export WINEDEBUG=-all
-export WINEFSYNC=1
-
-# XDG
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
-
-# Pager
-export MANPAGER="bat -plman"
+if [ -d $HOME/.var/app/dev.zed.Zed ]; then
+    alias zed="flatpak run dev.zed.Zed"
+fi
 
 ### bling.sh source start
 test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
