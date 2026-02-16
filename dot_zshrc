@@ -30,7 +30,7 @@ alias zed="flatpak run dev.zed.Zed"
 [[ -f $HOME/.cargo/bin/cpx ]] && alias cp=$HOME/.cargo/bin/cpx
 
 ### Pager
-export MANPAGER="bat -plman"
+[[ command -v bat ]] && export MANPAGER="bat -plman"
 
 ### zsh plugins
 [[ -f /home/linuxbrew/.linuxbrew/bin/atuin ]] && eval "$(atuin init zsh)"
