@@ -8,4 +8,5 @@
 
 if [ "$(command -v bat)" ]; then
     alias cat=bat
+    export MANPAGER="bat -plman"
 fi
