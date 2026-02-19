@@ -27,5 +27,5 @@ fi
 unset rc
 
 ### bling.sh source start
-test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
+test -f /usr/share/bazzite-cli/bling.sh && source /usr/share/bazzite-cli/bling.sh
 ### bling.sh source end
