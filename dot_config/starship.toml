@@ -139,7 +139,7 @@ symbol = " "
 symbol = " "
 
 [hostname]
-format = '[$symbol $hostname]($style) '
+format = '[$ssh_symbol$hostname]($style) '
 style = "lavendar"
 ssh_symbol = " "
 
