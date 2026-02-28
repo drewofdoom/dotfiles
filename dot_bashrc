@@ -29,3 +29,8 @@ unset rc
 ### bling.sh source start
 test -f /usr/share/bazzite-cli/bling.sh && source /usr/share/bazzite-cli/bling.sh
 ### bling.sh source end
+
+if [ -z "$CONTAINER_ID" ]; then
+    WINELOADER="/home/drew/.var/app/com.usebottles.bottles/data/bottles/runners/kron4ek-wine-11.2-staging-tkg-amd64/bin/wine"
+    WINEDEBUG=-all
+fi
