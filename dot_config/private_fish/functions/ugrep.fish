@@ -1,4 +1,6 @@
-# grep --> ugrep
+# ~/.config/fish/functions/ugrep.fish
+# redirect grep to ugrep
+
 if type -q ug
     function grep
         ug $argv
