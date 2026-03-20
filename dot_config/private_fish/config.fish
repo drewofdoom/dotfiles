@@ -3,6 +3,7 @@
 # Standard Variables
 set -U fish_greeting ""
 set -gx SHELL /usr/bin/fish
+set -U FISH_NO_UPGRADE_WARNING 1
 
 # Path
 if test -d $HOME/.cargo/bin
