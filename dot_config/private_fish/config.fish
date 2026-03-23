@@ -82,6 +82,11 @@ if status is-interactive
     function zed
         /usr/bin/flatpak run dev.zed.Zed $argv
     end
+    
+    ### -- GNOME text editor flatpak
+    function edit
+        /usr/bine/flatpak run org.gnome.TextEditor $argv
+    end
 
     # Theme
     fish_config theme choose "Catppuccin Mocha"
