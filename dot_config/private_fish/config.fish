@@ -86,7 +86,7 @@ if status is-interactive
     end
 
     ### -- GNOME text editor flatpak
-    if test -f $HOME/.var/app/org.gnome.TextEditor
+    if test -d $HOME/.var/app/org.gnome.TextEditor
         function edit
             /usr/bin/flatpak run org.gnome.TextEditor $argv
         end
