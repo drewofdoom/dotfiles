@@ -79,13 +79,17 @@ if status is-interactive
     end
 
     ### -- zed flatpak
-    function zed
-        /usr/bin/flatpak run dev.zed.Zed $argv
+    if test -d $HOME/.var/app/dev.zed.Zed
+        function zed
+            /usr/bin/flatpak run dev.zed.Zed $argv
+        end
     end
-    
+
     ### -- GNOME text editor flatpak
-    function edit
-        /usr/bin/flatpak run org.gnome.TextEditor $argv
+    if test -f $HOME/.var/app/org.gnome.TextEditor
+        function edit
+            /usr/bin/flatpak run org.gnome.TextEditor $argv
+        end
     end
 
     # Theme
