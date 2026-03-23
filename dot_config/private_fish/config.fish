@@ -85,7 +85,7 @@ if status is-interactive
     
     ### -- GNOME text editor flatpak
     function edit
-        /usr/bine/flatpak run org.gnome.TextEditor $argv
+        /usr/bin/flatpak run org.gnome.TextEditor $argv
     end
 
     # Theme
