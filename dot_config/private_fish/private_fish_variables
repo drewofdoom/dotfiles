@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR FISH_NO_UPGRADE_WARNING:1
 SETUVAR SHELL:/usr/bin/fish
 SETUVAR __fish_initialized:3800
 SETUVAR fish_greeting:
