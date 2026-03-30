@@ -4,6 +4,7 @@
 set -U fish_greeting ""
 set -gx SHELL /usr/bin/fish
 set -U FISH_NO_UPGRADE_WARNING 1
+set -Ux EDITOR "/usr/bin/flatpak run org.gnome.TextEditor"
 
 # Path
 if test -d $HOME/.cargo/bin
@@ -12,88 +13,91 @@ end
 
 # Configuration for interactive sessions
 if status is-interactive
-    # Applications
-    ## Eval
-    ### -- Atuin
-    if type -q atuin
-        eval "$(atuin init fish)"
-    end
+  # Theme
+  fish_config theme choose "Catppuccin Mocha"
+    
+  # Completions
+  if test -d /home/linuxbrew/.linuxbrew/share/fish/vendor_completions.d
+    source /home/linuxbrew/.linuxbrew/share/fish/vendor_completions.d/*.fish
+  end
 
-    ### -- Zoxide
-    if type -q zoxide
-        eval "$(zoxide init fish)"
-    end
+  # Applications
+  ## -- Atuin
+  if type -q atuin
+    eval "$(atuin init fish)"
+  end
 
-    ## Conditional replacements
-    ### -- Bat
-    if type -q bat
-        function cat
-            bat  $argv
-        end
-        set -gx MANPAGER "bat -plman"
-    end
+  ## -- Zoxide
+  if type -q zoxide
+    eval "$(zoxide init fish)"
+  end
 
-    ### -- cpx
-    if type -q cpx
-        function cp
-            cpx $argv
-        end
+  ## -- Bat
+  if type -q bat
+    function cat
+      bat  $argv
     end
+    set -gx MANPAGER "bat -plman"
+  end
 
-    ### -- eza
-    if type -q eza
-        function ls
-            eza $argv
-        end
-        function ll
-            eza -l --icons=auto --group-directories-first $argv
-        end
-        function l.
-            eza -d .*
-        end
-        function l1
-            eza -1 $argv
-        end
+  ## -- cpx
+  if type -q cpx
+      function cp
+        cpx $argv
+      end
+  end
+
+  ## -- eza
+  if type -q eza
+    function ls
+      eza $argv
     end
-
-    ### -- ugrep
-    if type -q ug
-        function grep
-            ug $argv
-        end
-        function egrep
-            ug -E $argv
-        end
-        function fgrep
-            ug -F $argv
-        end
-        function xzgrep
-            ug -z $argv
-        end
-        function xzegrep
-            ug -zE $argv
-        end
-        function xzfgrep
-            ug -zF $argv
-        end
+    function ll
+      eza -l --icons=auto --group-directories-first $argv
     end
-
-    ### -- zed flatpak
-    if test -d $HOME/.var/app/dev.zed.Zed
-        function zed
-            /usr/bin/flatpak run dev.zed.Zed $argv
-        end
+    function l.
+      eza -d .*
     end
-
-    ### -- GNOME text editor flatpak
-    if test -d $HOME/.var/app/org.gnome.TextEditor
-        function edit
-            /usr/bin/flatpak run org.gnome.TextEditor $argv
-        end
+    function l1
+      eza -1 $argv
     end
+  end
 
-    # Theme
-    fish_config theme choose "Catppuccin Mocha"
+  ## -- ugrep
+  if type -q ug
+    function grep
+      ug $argv
+    end
+    function egrep
+      ug -E $argv
+    end
+    function fgrep
+      ug -F $argv
+    end
+    function xzgrep
+      ug -z $argv
+    end
+    function xzegrep
+      ug -zE $argv
+    end
+    function xzfgrep
+      ug -zF $argv
+    end
+  end
+
+  ## -- zed flatpak
+  if test -d $HOME/.var/app/dev.zed.Zed
+    function zed
+      /usr/bin/flatpak run dev.zed.Zed $argv
+    end
+  end
+
+  ## -- GNOME text editor flatpak
+  if test -d $HOME/.var/app/org.gnome.TextEditor
+    function gedit
+      /usr/bin/flatpak run org.gnome.TextEditor $argv
+    end
+  end
 end
 
 ### Starship prompt
