@@ -15,7 +15,7 @@ end
 if status is-interactive
   # Theme
   fish_config theme choose "Catppuccin Mocha"
-    
+
   # Completions
   if test -d /home/linuxbrew/.linuxbrew/share/fish/vendor_completions.d
     source /home/linuxbrew/.linuxbrew/share/fish/vendor_completions.d/*.fish
@@ -98,7 +98,13 @@ if status is-interactive
       /usr/bin/flatpak run org.gnome.TextEditor $argv
     end
   end
-end
+
+  ## -- VS Code
+  if test -d $HOME/.var/app/com.visualstudio.code
+    function code
+      /usr/bin/flatpak run com.visualstudio.code $argv
+    end
+  end
 
 ### Starship prompt
 if type -q starship;
