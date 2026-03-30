@@ -105,6 +105,7 @@ if status is-interactive
       /usr/bin/flatpak run com.visualstudio.code $argv
     end
   end
+end
 
 ### Starship prompt
 if type -q starship;
