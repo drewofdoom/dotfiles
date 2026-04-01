@@ -85,24 +85,10 @@ if status is-interactive
         end
     end
 
-    ## -- zed flatpak
-    if test -d $HOME/.var/app/dev.zed.Zed
-        function zed
-            /usr/bin/flatpak run dev.zed.Zed $argv
-        end
-    end
-
     ## -- GNOME text editor flatpak
     if test -d $HOME/.var/app/org.gnome.TextEditor
         function gedit
             /usr/bin/flatpak run org.gnome.TextEditor $argv
-        end
-    end
-
-    ## -- VS Code
-    if test -d $HOME/.var/app/com.visualstudio.code
-        function code
-            /usr/bin/flatpak run com.visualstudio.code $argv
         end
     end
 end
