@@ -6,3 +6,6 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
+if [ -f /home/drew/.config/broot/launcher/bash/br ]; then
+    source /home/drew/.config/broot/launcher/bash/br
+fi    
