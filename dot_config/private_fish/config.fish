@@ -103,7 +103,6 @@ end
 
 ### Starship prompt
 if type -q starship
-
     starship init fish | source
 end
 
@@ -112,4 +111,3 @@ if test -f /usr/share/ublue-os/bling/bling.fish
     source /usr/share/ublue-os/bling/bling.fish
 end
 ### bling.fish source end
-
