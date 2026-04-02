@@ -96,7 +96,7 @@ if status is-interactive
     ## -- VS Code
     if test -d $HOME/.var/app/com.visualstudio.code
         function code
-            /usr/bin/flatpak run com.visualstudio.code
+            /usr/bin/flatpak run com.visualstudio.code $argv
         end
     end
 end
