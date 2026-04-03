@@ -7,19 +7,24 @@ set -U FISH_NO_UPGRADE_WARNING 1
 set -Ux EDITOR "/usr/bin/flatpak run org.gnome.TextEditor"
 set --global fish_key_bindings fish_default_key_bindings
 
-# Path
-if test -d $HOME/.cargo/bin
-    fish_add_path -a $HOME/.cargo/bin
-end
-
 # Configuration for interactive sessions
 if status is-interactive
+    # Path
+    if test -d $HOME/.cargo/bin
+        fish_add_path -a $HOME/.cargo/bin
+    end
+
     # Theme
     fish_config theme choose "Catppuccin Mocha"
 
     # Completions
     if test -d /home/linuxbrew/.linuxbrew/share/fish/vendor_completions.d
         source /home/linuxbrew/.linuxbrew/share/fish/vendor_completions.d/*.fish
+    end
+
+    # WINE
+    if test- f $HOME/.local/bin/wineloader.sh
+        set -gx WINELOADER=$HOME/.local/bin/wineloader.sh
     end
 
     # Applications
