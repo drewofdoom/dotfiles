@@ -24,7 +24,7 @@ if status is-interactive
 
     # WINE
     if test -f $HOME/.local/bin/wineloader.sh
-        set -gx WINELOADER=$HOME/.local/bin/wineloader.sh
+        set -gx WINELOADER "$HOME/.local/bin/wineloader.sh"
     end
 
     # Applications
