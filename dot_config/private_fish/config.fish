@@ -23,7 +23,7 @@ if status is-interactive
     end
 
     # WINE
-    if test- f $HOME/.local/bin/wineloader.sh
+    if test -f $HOME/.local/bin/wineloader.sh
         set -gx WINELOADER=$HOME/.local/bin/wineloader.sh
     end
 
