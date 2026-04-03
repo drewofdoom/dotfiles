@@ -1,1 +1,3 @@
 #/bin/sh
+
+export WINELOADER=$HOME/.local/bin/wineloader.sh
