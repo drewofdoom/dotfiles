@@ -22,11 +22,6 @@ if status is-interactive
         source /home/linuxbrew/.linuxbrew/share/fish/vendor_completions.d/*.fish
     end
 
-    # WINE
-    if test -f $HOME/.local/bin/wineloader.sh
-        set -gx WINELOADER "$HOME/.local/bin/wineloader.sh"
-    end
-
     # Applications
     ## -- Atuin
     if type -q atuin
