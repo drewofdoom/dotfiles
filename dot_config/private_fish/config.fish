@@ -93,12 +93,12 @@ if status is-interactive
         end
     end
 
-    ## -- VS Code
-    if test -d $HOME/.var/app/com.visualstudio.code
-        function code
-            /usr/bin/flatpak run com.visualstudio.code $argv
-        end
-    end
+    # ## -- VS Code
+    # if test -d $HOME/.var/app/com.visualstudio.code
+    #     function code
+    #         /usr/bin/flatpak run com.visualstudio.code $argv
+    #     end
+    # end
 end
 
 ### Starship prompt
