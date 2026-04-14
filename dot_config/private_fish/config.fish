@@ -35,7 +35,7 @@ if status is-interactive
     ## -- Bat
     if type -q bat
         function cat
-            bat $argv
+            bat --plain $argv
         end
         set -gx MANPAGER "bat -plman"
     end
