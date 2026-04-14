@@ -4,7 +4,6 @@
 set -U fish_greeting ""
 set -gx SHELL /usr/bin/fish
 set -U FISH_NO_UPGRADE_WARNING 1
-set -Ux EDITOR "/usr/bin/flatpak run org.gnome.TextEditor"
 set --global fish_key_bindings fish_default_key_bindings
 
 # Configuration for interactive sessions
