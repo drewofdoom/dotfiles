@@ -4,7 +4,7 @@ Type=Application
 Name=REAPER
 Comment=REAPER
 Categories=Audio;Video;AudioVideo;AudioVideoEditing;Recorder;
-Exec="/home/drew/.local/opt/REAPER/reaper" %F
+Exec="env WINELOADER=/home/drew/.local/bin/wineloader.sh /home/drew/.local/opt/REAPER/reaper" %F
 Icon=cockos-reaper
 MimeType=application/x-reaper-project;application/x-reaper-project-backup;application/x-reaper-theme
 StartupWMClass=REAPER
