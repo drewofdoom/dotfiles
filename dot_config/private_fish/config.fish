@@ -85,29 +85,9 @@ if status is-interactive
             ug -zF $argv
         end
     end
-
-    ## -- GNOME text editor flatpak
-    if test -d $HOME/.var/app/org.gnome.TextEditor
-        function gedit
-            /usr/bin/flatpak run org.gnome.TextEditor $argv
-        end
-    end
-
-    # ## -- VS Code
-    # if test -d $HOME/.var/app/com.visualstudio.code
-    #     function code
-    #         /usr/bin/flatpak run com.visualstudio.code $argv
-    #     end
-    # end
 end
 
 ### Starship prompt
 if type -q starship
     starship init fish | source
 end
-
-### bling.fish source start
-if test -f /usr/share/ublue-os/bling/bling.fish
-    source /usr/share/ublue-os/bling/bling.fish
-end
-### bling.fish source end
