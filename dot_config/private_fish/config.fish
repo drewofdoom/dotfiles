@@ -84,6 +84,13 @@ if status is-interactive
             ug -zF $argv
         end
     end
+
+    ## -- VS Code Flatpak
+    if test -d /var/lib/flatpak/app/com.visualstudio.code
+        function code
+            flatpak run com.visualstudio.code $argv
+        end
+    end
 end
 
 ### Starship prompt
