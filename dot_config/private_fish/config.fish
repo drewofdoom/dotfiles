@@ -9,6 +9,7 @@ set --global fish_key_bindings fish_default_key_bindings
 # Configuration for interactive sessions
 if status is-interactive
     # Path
+    ## -- Rust
     if test -d $HOME/.cargo/bin
         fish_add_path -a $HOME/.cargo/bin
     end
@@ -22,6 +23,11 @@ if status is-interactive
     end
 
     # Applications
+    ## -- VS Code
+    if type -q code
+       set -gx EDITOR code
+    end
+
     ## -- Atuin
     if type -q atuin
         eval "$(atuin init fish)"
@@ -85,11 +91,9 @@ if status is-interactive
         end
     end
 
-    ## -- VS Code Flatpak
-    if test -d /var/lib/flatpak/app/com.visualstudio.code
-        function code
-            flatpak run com.visualstudio.code $argv
-        end
+    ## -- television
+    if type -q tv
+        tv init fish | source
     end
 end
 
