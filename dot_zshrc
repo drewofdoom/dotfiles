@@ -1,0 +1,112 @@
+# ~/.zshrc
+
+# ── Standard Options  ────────────────────────────────────────────────────────
+
+setopt NO_NOMATCH
+
+# ── Standard Variables  ────────────────────────────────────────────────────────
+
+export SHELL=/usr/bin/zsh
+
+# ── Key Bindings ──────────────────────────────────────────────────────────────
+
+# Use standard (emacs-style) line editing
+bindkey -e
+
+# Ctrl+direction
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+# Home / End
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
+# Delete
+bindkey "^[[3~" delete-char
+
+# Word deletion
+bindkey "^H" backward-delete-word   # Ctrl+Backspace
+bindkey "^[[3;5~" delete-word       # Ctrl+Delete
+
+# ── Path ──────────────────────────────────────────────────────────────────────
+
+## -- Rust
+[[ -d "$HOME/.cargo/bin" ]] && path=("$HOME/.cargo/bin" $path)
+
+# ── Completions ───────────────────────────────────────────────────────────────
+
+## -- Homebrew (linuxbrew) completions
+if [[ -d /home/linuxbrew/.linuxbrew/share/zsh/site-functions ]]; then
+    fpath+=(/home/linuxbrew/.linuxbrew/share/zsh/site-functions)
+fi
+
+autoload -Uz compinit && compinit
+
+# ── Plugins ───────────────────────────────────────────────────────────────────
+
+# Load these last — they wrap ZLE widgets set up by compinit
+if [[ -f /home/linuxbrew/.linuxbrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]]; then
+    source /home/linuxbrew/.linuxbrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+fi
+
+if [[ -f /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+    source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+# ── Applications ──────────────────────────────────────────────────────────────
+
+## -- VS Code
+if (( $+commands[code] )); then
+    export EDITOR=code
+fi
+
+## -- television
+if (( $+commands[tv] )); then
+    eval "$(tv init zsh)"
+fi
+
+## -- Atuin
+if (( $+commands[atuin] )); then
+    eval "$(atuin init zsh)"
+    bindkey "^[[A" atuin-search
+    bindkey "^[[B" atuin-search
+fi
+
+## -- Zoxide
+if (( $+commands[zoxide] )); then
+    eval "$(zoxide init zsh)"
+fi
+
+## -- Bat
+if (( $+commands[bat] )); then
+    alias cat='bat --plain'
+    export MANPAGER="bat -plman"
+fi
+
+## -- cpx
+if (( $+commands[cpx] )); then
+    alias cp='cpx'
+fi
+
+## -- eza
+if (( $+commands[eza] )); then
+    alias ls='eza'
+    alias ll='eza -l --icons=auto --group-directories-first'
+    alias l.='eza -d .*'
+    alias l1='eza -1'
+fi
+
+## -- ugrep
+if (( $+commands[ug] )); then
+    alias grep='ug'
+    alias egrep='ug -E'
+    alias fgrep='ug -F'
+    alias xzgrep='ug -z'
+    alias xzegrep='ug -zE'
+    alias xzfgrep='ug -zF'
+fi
+
+## -- Starship prompt
+if (( $+commands[starship] )); then
+    eval "$(starship init zsh)"
+fi

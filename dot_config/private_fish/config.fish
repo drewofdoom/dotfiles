@@ -14,6 +14,11 @@ if status is-interactive
         fish_add_path -a $HOME/.cargo/bin
     end
 
+    ## -- linuxbrew
+    if test -d /home/linuxbrew/.linuxbrew/bin/brew
+        fish_add_path -a /home/linuxbrew/.linuxbrew/bin/brew
+    end
+
     # Theme
     fish_config theme choose "Catppuccin Mocha"
 
