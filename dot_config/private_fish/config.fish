@@ -15,8 +15,8 @@ if status is-interactive
     end
 
     ## -- linuxbrew
-    if test -d /home/linuxbrew/.linuxbrew/bin/brew
-        fish_add_path -a /home/linuxbrew/.linuxbrew/bin/brew
+    if test -d /home/linuxbrew/.linuxbrew/bin
+        fish_add_path -a /home/linuxbrew/.linuxbrew/bin
     end
 
     # Theme
