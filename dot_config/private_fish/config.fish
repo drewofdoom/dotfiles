@@ -33,6 +33,11 @@ if status is-interactive
        set -gx EDITOR code
     end
 
+    ## -- Zed
+    if type -q zed
+       set -gx EDITOR zed
+    end
+
     ## -- Atuin
     if type -q atuin
         eval "$(atuin init fish)"
@@ -100,9 +105,28 @@ if status is-interactive
     if type -q tv
         tv init fish | source
     end
-end
 
-### Starship prompt
-if type -q starship
-    starship init fish | source
+    # Functions
+    ## - Convert all wav in (pwd) to flac
+    function wav2flac
+        for file in *.wav
+            set name (basename "$file" .wav)
+            ffmpeg -i "$file" -c:a flac "$name.flac"
+            rm $file
+        end
+    end
+
+    ## - Convert all flac in (pwd) to wav
+    function flac2wav
+        for file in *.flac
+            set name (basename "$file" .flac)
+            ffmpeg -i "$file" -c:a pcm_s24le "$name.wav"
+            rm $file
+        end
+    end
+
+    # Prompt
+    if type -q starship
+        starship init fish | source
+    end
 end

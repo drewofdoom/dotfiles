@@ -1,0 +1,8 @@
+theme = Catppuccin Mocha
+shell-integration = fish
+shell-integration-features = true
+command = /usr/bin/fish --login --interactive
+font-family = "FiraCode Nerd Font"
+window-height = 40
+window-width = 120
+cursor-style = bar
