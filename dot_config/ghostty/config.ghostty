@@ -6,3 +6,4 @@ font-family = "FiraCode Nerd Font"
 window-height = 40
 window-width = 120
 cursor-style = bar
+background-opacity = 0.96
