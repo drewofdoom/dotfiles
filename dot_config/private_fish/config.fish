@@ -20,17 +20,11 @@ if status is-interactive
     end
 
     # Theme
-    fish_config theme choose "Catppuccin Mocha"
+    fish_config theme choose "Rosé Pine Auto"
 
     # Completions
     if test -d /home/linuxbrew/.linuxbrew/share/fish/vendor_completions.d
         source /home/linuxbrew/.linuxbrew/share/fish/vendor_completions.d/*.fish
-    end
-
-    # Applications
-    ## -- VS Code
-    if type -q code
-       set -gx EDITOR code
     end
 
     ## -- Zed
