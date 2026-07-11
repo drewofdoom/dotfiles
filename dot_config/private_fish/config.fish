@@ -39,10 +39,7 @@ if status is-interactive
 
     ## -- Zoxide
     if type -q zoxide
-        eval "$(zoxide init fish)"
-        function cd
-            zoxide $argv
-        end
+      zoxide init fish --cmd cd | source
     end
 
     ## -- dust
