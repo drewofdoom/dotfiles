@@ -40,6 +40,16 @@ if status is-interactive
     ## -- Zoxide
     if type -q zoxide
         eval "$(zoxide init fish)"
+        function cd
+            zoxide $argv
+        end
+    end
+
+    ## -- dust
+    if type -q dust
+        function du
+            dust $argv
+        end
     end
 
     ## -- Bat
@@ -48,13 +58,6 @@ if status is-interactive
             bat --plain $argv
         end
         set -gx MANPAGER "bat -plman"
-    end
-
-    ## -- cpx
-    if type -q cpx
-        function cp
-            cpx $argv
-        end
     end
 
     ## -- eza
@@ -73,25 +76,32 @@ if status is-interactive
         end
     end
 
-    ## -- ugrep
-    if type -q ug
+    # -- fd
+    if type -q fd
+        function find
+            fd $argv
+        end
+    end
+
+    ## -- ripgrep
+    if type -q rg
         function grep
-            ug $argv
+            rg $argv
         end
         function egrep
-            ug -E $argv
+            rg -e $argv
         end
         function fgrep
-            ug -F $argv
+            rg -F $argv
         end
         function xzgrep
-            ug -z $argv
+            rg -z $argv
         end
         function xzegrep
-            ug -zE $argv
+            rg -ze $argv
         end
         function xzfgrep
-            ug -zF $argv
+            rg -zF $argv
         end
     end
 
