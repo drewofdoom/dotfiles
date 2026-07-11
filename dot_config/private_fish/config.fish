@@ -34,7 +34,7 @@ if status is-interactive
 
     ## -- Atuin
     if type -q atuin
-        eval "$(atuin init fish)"
+        eval "$(atuin init fish --disable-up-arrow)"
     end
 
     ## -- Zoxide
