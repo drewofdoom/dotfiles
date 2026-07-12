@@ -27,11 +27,6 @@ if status is-interactive
         source /home/linuxbrew/.linuxbrew/share/fish/vendor_completions.d/*.fish
     end
 
-    ## -- Zed
-    if type -q zed
-       # set -gx EDITOR zed
-    end
-
     ## -- Atuin
     if type -q atuin
         eval "$(atuin init fish --disable-up-arrow)"
