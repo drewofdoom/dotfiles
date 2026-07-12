@@ -1,0 +1,72 @@
+environment {
+  ELECTRON_OZONE_PLATFORM_HINT "auto"
+  QT_QPA_PLATFORM "wayland"
+  QT_QPA_PLATFORMTHEME "gtk3"
+  QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+}
+
+input {
+    keyboard {
+        xkb {
+        }
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    trackpoint {
+    }
+
+    trackball {
+        accel-speed 0.2
+        accel-profile "adaptive"
+    }
+
+    touch {
+        map-to-output "HDMI-A-1"
+    }
+}
+
+layout {
+    background-color "transparent"
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+prefer-no-csd
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+animations {
+    slowdown 1.5
+}
+
+blur {
+    passes 2
+    offset 1
+    noise 0
+    saturation 1.5
+}
+
+layer-rule {
+    match namespace="^dms:clipboard$"
+    block-out-from "screencast"
+}
+
+window-rule {
+  match app-id="steam" title="^notificationtoasts_\\d+_desktop$"
+  default-floating-position x=0 y=0 relative-to="bottom-right"
+  open-focused false
+}
+
+// DMS Include Configs
+include "dms/outputs.kdl"
+include "dms/windowrules.kdl"
+include "dms/binds.kdl"
+include "dms/cursor.kdl"
+include "dms/colors.kdl"
+include "dms/layout.kdl"
+include "dms/alttab.kdl"
