@@ -29,7 +29,7 @@ if status is-interactive
 
     ## -- Zed
     if type -q zed
-       set -gx EDITOR zed
+       # set -gx EDITOR zed
     end
 
     ## -- Atuin
