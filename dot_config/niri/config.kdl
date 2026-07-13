@@ -92,11 +92,6 @@ window-rule {
   open-focused false
 }
 
-layer-rule {
-    match namespace="^quickshell$"
-    place-within-backdrop true
-}
-
 // DMS Include Configs
 include "dms/outputs.kdl"
 include "dms/windowrules.kdl"
