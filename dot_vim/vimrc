@@ -1,2 +1,4 @@
+set laststatus=2
 set background=dark
 colorscheme rosepine
+let g:lightline = { 'colorscheme': 'rosepine' }
