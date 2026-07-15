@@ -79,11 +79,6 @@ window-rule {
     draw-border-with-background false
 }
 
-window-rule {
-    geometry-corner-radius 12
-    clip-to-geometry true
-}
-
 // Open DMS windows as floating by default
 window-rule {
     match app-id=r#"org.quickshell$"#
