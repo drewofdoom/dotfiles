@@ -30,6 +30,8 @@ input {
     touch {
         map-to-output "HDMI-A-1"
     }
+
+    focus-follows-mouse max-scroll-amount="10%"
 }
 
 layout {
