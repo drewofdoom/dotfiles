@@ -2,11 +2,11 @@
 name = "rose-pine"
 
 [colors]
-AlertInfo = "#9ccfd8"
+AlertInfo = "#31748f"
 AlertWarn = "#f6c177"
 AlertError = "#eb6f92"
-Annotation = "#908caa"
+Annotation = "#6e6a86"
 Base = "#191724"
-Guidance = "#6e6a86"
+Guidance = "#908caa"
 Important = "#c4a7e7"
 Title = "#e0def4"
