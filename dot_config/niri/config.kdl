@@ -306,9 +306,6 @@ binds {
     Mod+BracketRight {
       consume-or-expel-window-right;
     }
-    Mod+Comma {
-      consume-window-into-column;
-    }
     Mod+Ctrl+Down {
       move-window-down;
     }
@@ -362,7 +359,7 @@ binds {
     Mod+Shift+F {
       fullscreen-window;
     }
-    Mod+M {
+    Mod+Shift+M {
       maximize-window-to-edges;
     }
     Mod+Minus {
