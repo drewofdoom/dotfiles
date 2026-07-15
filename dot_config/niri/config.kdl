@@ -161,7 +161,7 @@ binds {
     }
 
     // Actions
-    Mod+O repeat=false {
+    Mod+D repeat=false {
       toggle-overview;
     }
     Mod+C {
