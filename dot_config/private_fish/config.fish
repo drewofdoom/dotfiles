@@ -97,30 +97,6 @@ if status is-interactive
         end
     end
 
-    ## -- television
-    if type -q tv
-        tv init fish | source
-    end
-
-    # Functions
-    ## - Convert all wav in (pwd) to flac
-    function wav2flac
-        for file in *.wav
-            set name (basename "$file" .wav)
-            ffmpeg -i "$file" -c:a flac "$name.flac"
-            rm $file
-        end
-    end
-
-    ## - Convert all flac in (pwd) to wav
-    function flac2wav
-        for file in *.flac
-            set name (basename "$file" .flac)
-            ffmpeg -i "$file" -c:a pcm_s24le "$name.wav"
-            rm $file
-        end
-    end
-
     # Prompt
     if type -q starship
         starship init fish | source
