@@ -11,6 +11,11 @@ if status is-interactive
   # Theme
   fish_config theme choose "Rosé Pine Auto"
 
+  # Prompt
+  if type -q starship
+    starship init fish | source
+  end
+
   # Path
   ## -- Rust
   if test -d $HOME/.cargo/bin
@@ -96,10 +101,5 @@ if status is-interactive
     function xzfgrep
       rg -zF $argv
     end
-  end
-
-  # Prompt
-  if type -q starship
-    starship init fish | source
   end
 end
