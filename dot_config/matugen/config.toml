@@ -7,3 +7,7 @@ output_path = '/var/home/drew/.config/starship.toml'
 [templates.fish]
 input_path = '/var/home/drew/.config/matugen/templates/fish.toml'
 output_path = '/var/home/drew/.config/fish/conf.d/dankcolors.fish'
+
+[templates.yazi]
+input_path = '/var/home/drew/.config/matugen/templates/yazi.toml'
+output_path = '/var/home/drew/.config/yazi/themes/flavors/dankcolors.yazi'
