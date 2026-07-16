@@ -1,4 +1,4 @@
-theme = dark:Rose Pine,light:Rose Pine Dawn
+theme = dankcolors
 shell-integration = fish
 shell-integration-features = true
 command = /usr/bin/fish --login --interactive
