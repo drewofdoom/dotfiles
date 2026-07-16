@@ -68,7 +68,6 @@ layer-rule {
 
 layer-rule {
     match namespace="^dms:frame$"
-    match namespace="^dms:bar$"
     background-effect {
       blur true
     }
