@@ -1,9 +1,0 @@
-; vim: ft=colortemplate
-
-Include: _terminal_colors
-
-Include: _base
-
-Include: _syntax
-
-Include: _vimwiki
