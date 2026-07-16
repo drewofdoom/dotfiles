@@ -66,6 +66,14 @@ layer-rule {
     place-within-backdrop true
 }
 
+layer-rule {
+    match namespace="^dms:frame$"
+    match namespace="^dms:bar$"
+    background-effect {
+      blur true
+    }
+}
+
 window-rule {
     match app-id=r#"^org\.gnome\."#
     draw-border-with-background false
