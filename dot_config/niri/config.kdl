@@ -65,7 +65,8 @@ layer-rule {
     match namespace="^quickshell$"
     place-within-backdrop true
     background-effect {
-      blur true
+        blur true
+    }
 }
 
 window-rule {
