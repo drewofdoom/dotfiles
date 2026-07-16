@@ -10,7 +10,7 @@ set --global fish_key_bindings fish_default_key_bindings
 if status is-interactive
   # Theme
   # fish_config theme choose "Rosé Pine Auto"
-  fish_config theme choose catppuccin-macchiato
+  # fish_config theme choose catppuccin-macchiato
 
   # Prompt
   if type -q starship
