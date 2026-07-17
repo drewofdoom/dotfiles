@@ -44,3 +44,9 @@ format = "[](fg:color8 bg:color4)[${symbol}${version}](bg:color8 fg:color5)[�
 symbol = '🐍'
 # pyenv_version_name = true
 pyenv_prefix = 'venv'
+
+[user]
+style_user = 'color4'
+style_root = 'color10'
+format = "[](fg:color1 bg:$style)󰉋](bg:color1 fg:color2)[ ](fg:color1 bg:$style)[$user ](fg:color3 bg:$style)[ ](fg:$style)"
+show_always = true
