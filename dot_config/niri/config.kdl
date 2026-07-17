@@ -172,7 +172,7 @@ binds {
       spawn "noctalia" "msg" "media" "next";
     }
     XF86AudioPlay allow-when-locked=true hotkey-overlay-title="Media: Play/Pause" {
-      spawn "noctalia" "msg" "media" "play";
+      spawn "noctalia" "msg" "media" "toggle";
     }
     XF86AudioPrev allow-when-locked=true hotkey-overlay-title="Media: Previous Track" {
       spawn "noctalia" "msg" "media" "previous";
