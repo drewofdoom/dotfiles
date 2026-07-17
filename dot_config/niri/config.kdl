@@ -157,28 +157,28 @@ binds {
 
     // Audio Controls
     XF86AudioRaiseVolume allow-when-locked=true {
-      spawn "dms" "ipc" "call" "audio" "increment" "3";
+      spawn "noctalia" "msg" "audio" "volume-up";
     }
     XF86AudioLowerVolume allow-when-locked=true {
-      spawn "dms" "ipc" "call" "audio" "decrement" "3";
+      spawn "noctalia" "msg" "audio" "volume-down";
     }
     XF86AudioMute allow-when-locked=true {
       spawn "dms" "ipc" "call" "audio" "mute";
     }
     XF86AudioMicMute allow-when-locked=true hotkey-overlay-title="Microphone Mute Toggle" {
-      spawn "dms" "ipc" "call" "mic" "mute";
+      spawn "noctalia" "msg" "mic-mute";
     }
     XF86AudioNext allow-when-locked=true hotkey-overlay-title="Media: Next Track" {
-      spawn "dms" "ipc" "call" "mpris" "next";
+      spawn "noctalia" "msg" "media" "next";
     }
     XF86AudioPlay allow-when-locked=true hotkey-overlay-title="Media: Play/Pause" {
-      spawn "dms" "ipc" "call" "mpris" "playPause";
+      spawn "noctalia" "msg" "media" "play";
     }
     XF86AudioPrev allow-when-locked=true hotkey-overlay-title="Media: Previous Track" {
-      spawn "dms" "ipc" "call" "mpris" "previous";
+      spawn "noctalia" "msg" "media" "previous";
     }
     XF86AudioStop allow-when-locked=true hotkey-overlay-title="Media: Stop" {
-      spawn "dms" "ipc" "call" "mpris" "stop";
+      spawn "noctalia" "msg" "media" "stop";
     }
 
     // Brightness Controls
