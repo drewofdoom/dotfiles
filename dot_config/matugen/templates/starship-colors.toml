@@ -46,4 +46,4 @@ symbol = '🐍'
 pyenv_prefix = 'venv'
 
 [user]
-style_root = [](fg:color1 bg:color10)[󰉋](bg:color1 fg:color2)[ ](fg:color1 bg:color10)[$path ](fg:color3 bg:color10)[ ](fg:color10)"
+style_root = [](fg:color1 bg:color10)[](bg:color1 fg:color2)[ ](fg:color1 bg:color10)[$user ](fg:color3 bg:color10)[ ](fg:color10)"
