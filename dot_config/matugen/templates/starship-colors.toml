@@ -47,3 +47,4 @@ pyenv_prefix = 'venv'
 
 [user]
 format = "[](fg:color1 bg:color4)[󰉋](bg:color1 fg:color2)[ ](fg:color1 bg:color4)[$user ](fg:color3 bg:color4)[ ](fg:color4)"
+show_always = true
