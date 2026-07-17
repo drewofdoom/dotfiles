@@ -1,5 +1,5 @@
 format = '''
-$user$directory$git_branch$rust$python
+$username$directory$git_branch$rust$python
 $character'''
 
 palette = 'colors'
@@ -45,15 +45,9 @@ symbol = '🐍'
 # pyenv_version_name = true
 pyenv_prefix = 'venv'
 
-# [username]
-# style_user = 'color4'
-# style_root = 'color10'
-# disabled = false
-# show_always = true
-# format = "[](fg:color1 bg:$style)[󰉋](bg:color1 fg:color2)[ ](fg:color1 bg:$style)[$user ](fg:color3 bg:$style)[ ](fg:$style)"
-
 [username]
+style_user = 'color4'
+style_root = 'color10'
+disabled = false
 show_always = true
-format = "[$user]($style) "
-style_user = "bold blue"
-style_root = "bold red"
+format = "[](fg:color1 bg:$style)[󰉋](bg:color1 fg:color2)[ ](fg:color1 bg:$style)[$user ](fg:color3 bg:$style)[ ](fg:$style)"
