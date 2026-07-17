@@ -29,10 +29,6 @@ input {
         accel-profile "adaptive"
     }
 
-    touch {
-        map-to-output "HDMI-A-1"
-    }
-
     focus-follows-mouse max-scroll-amount="10%"
 }
 
@@ -117,6 +113,18 @@ window-rule {
 
 binds {
     // Application Launchers
+    Mod+B hotkey-overlay-title="Default Web Browser: Open" {
+      spawn "dms" "ipc" "call" "defaultApp" "browser";
+    }
+    Mod+E hotkey-overlay-title="Default File Manager: Open" {
+      spawn "dms" "ipc" "call" "defaultApp" "fileManager";
+    }
+    Mod+T hotkey-overlay-title="Open a Terminal: ghostty" {
+      spawn "ghostty";
+    }
+    Alt+Ctrl+Shift+R hotkey-overlay-title="Start HDMI Capture" {
+      spawn "sh" "-c" "flatpak run io.mpv.Mpv av://v4l2:/dev/video1 --demuxer-lavf-o=video_size=1920x1080,framerate=60,input_format=yuyv422 --profile=low-latency --untimed --osc=no";
+    }
     Mod+Space hotkey-overlay-title="Application Launcher" {
       spawn "dms" "ipc" "call" "spotlight" "toggle";
     }
@@ -459,8 +467,6 @@ binds {
 // include "dms/colors.kdl"
 // include "dms/layout.kdl"
 // include "dms/alttab.kdl"
-
-include "shared/binds.kdl"
 
 include "local/outputs.kdl"
 include "local/windowrules.kdl"
