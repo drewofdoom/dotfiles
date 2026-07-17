@@ -1,4 +1,4 @@
-theme = dankcolors
+theme = noctalia
 shell-integration = fish
 shell-integration-features = true
 command = /usr/bin/fish --login --interactive
