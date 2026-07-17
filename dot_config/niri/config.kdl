@@ -8,6 +8,8 @@ environment {
   EDITOR "zed --wait"
 }
 
+spawn-at-startup "noctalia"
+
 input {
     keyboard {
         xkb {
