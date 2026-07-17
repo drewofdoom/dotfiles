@@ -49,4 +49,3 @@ pyenv_prefix = 'venv'
 style_user = '$color4'
 style_root = '$color10'
 show_always = true
-format = "[](fg:color1 bg:$style)[󰉋](bg:color1 fg:$style)[ ](fg:color1 bg:color4)[$user ](fg:color3 bg:$style)[ ](fg:$style)"
