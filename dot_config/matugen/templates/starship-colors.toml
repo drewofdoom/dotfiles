@@ -46,5 +46,5 @@ symbol = '🐍'
 pyenv_prefix = 'venv'
 
 [user]
-format = "[](fg:color1 bg:color4)[󰉋](bg:color1 fg:color2)[ ](fg:color1 bg:color4)[$user ](fg:color3 bg:color4)[ ](fg:color4)"
+format = "[](fg:color1 bg:color10)[󰉋](bg:color1 fg:color2)[ ](fg:color1 bg:color10)[$user ](fg:color3 bg:color10)[ ](fg:color10)"
 show_always = true
