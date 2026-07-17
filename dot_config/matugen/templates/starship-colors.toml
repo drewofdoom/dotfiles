@@ -1,11 +1,10 @@
 format = '''
-$directory$git_branch$rust$python
+$user$directory$git_branch$rust$python
 $character'''
 
 palette = 'colors'
 
 [palettes.colors]
-mustard = '#af8700' # example
 color1 = '{{colors.primary_fixed_dim.default.hex}}'
 color2 = '{{colors.on_primary.default.hex}}'
 color3 = '{{colors.on_surface_variant.default.hex}}'
@@ -15,8 +14,9 @@ color6 = '{{colors.surface_dim.default.hex}}'
 color7 = '{{colors.surface.default.hex}}'
 color8 = '{{colors.primary.default.hex}}'
 color9 = '{{colors.tertiary.default.hex}}'
+color10 = '{{colors.error.default.hex}}'
 
-# Prompt symbols 
+# Prompt symbols
 [character]
 success_symbol = "[🞈](color9 bold)"
 error_symbol = "[🞈](@{error})"
@@ -44,3 +44,6 @@ format = "[](fg:color8 bg:color4)[${symbol}${version}](bg:color8 fg:color5)[�
 symbol = '🐍'
 # pyenv_version_name = true
 pyenv_prefix = 'venv'
+
+[user]
+style_root = [](fg:color1 bg:color10)[󰉋](bg:color1 fg:color2)[ ](fg:color1 bg:color10)[$path ](fg:color3 bg:color10)[ ](fg:color10)"
