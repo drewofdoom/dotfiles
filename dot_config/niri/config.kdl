@@ -36,8 +36,23 @@ input {
     focus-follows-mouse max-scroll-amount="10%"
 }
 
+cursor {
+    xcursor-theme "Bibata-Original-Classic"
+    xcursor-size 22
+    hide-when-typing
+}
+
 layout {
     background-color "transparent"
+    gaps 16
+
+    border {
+        width 2
+    }
+
+    focus-ring {
+        width 2
+    }
 }
 
 hotkey-overlay {
@@ -66,6 +81,13 @@ layer-rule {
 layer-rule {
     match namespace="^quickshell$"
     place-within-backdrop true
+}
+
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+    tiled-state true
+    draw-border-with-background false
 }
 
 window-rule {
@@ -429,7 +451,7 @@ binds {
     }
 }
 
-// // DMS Include Configs
+// DMS Include Configs
 // include "dms/outputs.kdl"
 // include "dms/windowrules.kdl"
 // include "dms/binds.kdl"
@@ -437,3 +459,8 @@ binds {
 // include "dms/colors.kdl"
 // include "dms/layout.kdl"
 // include "dms/alttab.kdl"
+
+include "shared/binds.kdl"
+
+include "local/outputs.kdl"
+include "local/windowrules.kdl"
