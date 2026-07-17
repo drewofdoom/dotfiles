@@ -50,4 +50,4 @@ style_user = 'color3'
 style_root = 'color10'
 disabled = false
 show_always = true
-format = "[](fg:color1 bg:color4)[󰉋](bg:color1 fg:color2)[ ](fg:color1 bg:color4)[$user ](fg:$style bg:color4)[ ](fg:color4)"
+format = "[](fg:$style bg:color4)[󰉋](bg:color1 fg:$style)[ ](fg:$style bg:color4)[$user ](fg:$style bg:color4)[ ](fg:color4)"
