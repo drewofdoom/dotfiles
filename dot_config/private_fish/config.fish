@@ -27,10 +27,10 @@ if status is-interactive
 
   # SSH
   if not set -q SSH_AUTH_SOCK
-      eval (ssh-agent -c) > /dev/null
+      eval (ssh-agent -c)
       if type -q pass-cli
-        set -Ux SSH_AUTH_SOCK $HOME/.ssh/proton-pass-agent.sock
-        set -Ux SSH_AGENT_PID $HOME/.ssh/proton-pass-agent.pid
+          # Load Proton Pass keys into the running ssh-agent
+          pass-cli ssh-agent load
       end
   end
 
