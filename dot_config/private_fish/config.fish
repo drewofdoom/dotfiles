@@ -29,7 +29,7 @@ if status is-interactive
   if not set -q SSH_AUTH_SOCK
       if type -q pass-cli
           # Load Proton Pass keys into the running ssh-agent
-          pass-cli ssh-agent daemon start --vault-name SSH --create-new-identities SSH
+          pass-cli ssh-agent daemon start --vault-name SSH --create-new-identities SSH > /dev/null 2>&1 &
           set -Ux SSH_AUTH_SOCK $HOME/.ssh/proton-pass-agent.sock
       end
   end
