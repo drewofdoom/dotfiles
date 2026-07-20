@@ -88,25 +88,25 @@ if status is-interactive
     end
   end
 
-  ## -- ripgrep
-  if type -q rg
+  ## -- ugrep
+  if type -q ugrep
     function grep
-      rg $argv
+      ugrep $argv
     end
     function egrep
-      rg -e $argv
+      ugrep -E $argv
     end
     function fgrep
-      rg -F $argv
+      ugrep -F $argv
     end
     function xzgrep
-      rg -z $argv
+      ugrep -z $argv
     end
     function xzegrep
-      rg -ze $argv
+      ugrep -zE $argv
     end
     function xzfgrep
-      rg -zF $argv
+      ugrep -zF $argv
     end
   end
 end
