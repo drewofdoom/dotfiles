@@ -6,6 +6,9 @@ set -gx SHELL /usr/bin/fish
 set -U FISH_NO_UPGRADE_WARNING 1
 set --global fish_key_bindings fish_default_key_bindings
 
+# SSH agent from proton-pass-cli
+set -U SSH_AUTH_SOCK $HOME/.ssh/proton-pass-agent.sock
+
 # Configuration for interactive sessions
 if status is-interactive
 
