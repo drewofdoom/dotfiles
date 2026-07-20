@@ -25,15 +25,6 @@ if status is-interactive
     fish_add_path -a /home/linuxbrew/.linuxbrew/bin
   end
 
-  # SSH
-  if not set -q SSH_AUTH_SOCK
-      if type -q pass-cli
-          # Load Proton Pass keys into the running ssh-agent
-          pass-cli ssh-agent daemon start --vault-name SSH --create-new-identities SSH > /dev/null 2>&1 &
-          set -Ux SSH_AUTH_SOCK $HOME/.ssh/proton-pass-agent.sock
-      end
-  end
-
   # Completions
   if test -d /home/linuxbrew/.linuxbrew/share/fish/vendor_completions.d
     source /home/linuxbrew/.linuxbrew/share/fish/vendor_completions.d/*.fish
