@@ -91,22 +91,22 @@ if status is-interactive
   ## -- ugrep
   if type -q ugrep
     function grep
-      ugrep $argv
+      ug $argv
     end
     function egrep
-      ugrep -E $argv
+      ug -E $argv
     end
     function fgrep
-      ugrep -F $argv
+      ug -F $argv
     end
     function xzgrep
-      ugrep -z $argv
+      ug -z $argv
     end
     function xzegrep
-      ugrep -zE $argv
+      ug -zE $argv
     end
     function xzfgrep
-      ugrep -zF $argv
+      ug -zF $argv
     end
   end
 end
