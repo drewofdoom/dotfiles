@@ -6,9 +6,6 @@ set -gx SHELL /usr/bin/fish
 set -U FISH_NO_UPGRADE_WARNING 1
 set --global fish_key_bindings fish_default_key_bindings
 
-# SSH agent from proton-pass-cli
-set -U SSH_AUTH_SOCK $HOME/.ssh/proton-pass-agent.sock
-
 # Configuration for interactive sessions
 if status is-interactive
 
@@ -26,6 +23,15 @@ if status is-interactive
   ## -- linuxbrew
   if test -d /home/linuxbrew/.linuxbrew/bin
     fish_add_path -a /home/linuxbrew/.linuxbrew/bin
+  end
+
+  # SSH
+  if not set -q SSH_AUTH_SOCK
+      eval (ssh-agent -c) > /dev/null
+      if type -q pass-cli
+        set -Ux SSH_AUTH_SOCK $HOME/.ssh/proton-pass-agent.sock
+        set -Ux SSH_AGENT_PID $HOME/.ssh/proton-pass-agent.pid
+      end
   end
 
   # Completions
