@@ -1,0 +1,142 @@
+environment {
+  XDG_CURRENT_DESKTOP "niri"
+  XCURSOR_SIZE "14"
+  ELECTRON_OZONE_PLATFORM_HINT "auto"
+  QT_QPA_PLATFORM "wayland"
+  QT_QPA_PLATFORMTHEME "gtk3"
+  EDITOR "zed --wait"
+}
+
+spawn-at-startup "noctalia"
+
+input {
+    keyboard {
+        xkb {
+        }
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    trackpoint {
+    }
+
+    trackball {
+        accel-speed 0.2
+        accel-profile "adaptive"
+    }
+
+    focus-follows-mouse max-scroll-amount="10%"
+}
+
+cursor {
+    xcursor-theme "Bibata-Original-Classic"
+    xcursor-size 22
+    hide-when-typing
+}
+
+layout {
+    background-color "transparent"
+    gaps 16
+
+    border {
+        off
+    }
+
+    focus-ring {
+        width 2
+    }
+}
+
+recent-windows {
+    highlight {
+        corner-radius 12
+    }
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+prefer-no-csd
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+animations {
+    slowdown 1.7
+}
+
+blur {
+    passes 1
+    offset 3
+    noise 0.2
+    saturation 1.5
+}
+
+debug {
+  // Allows notification actions and window activation from Noctalia.
+  honor-xdg-activation-with-invalid-serial
+}
+
+layer-rule {
+  match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+  background-effect {
+    xray false
+    // blur false
+  }
+}
+
+layer-rule {
+  match namespace="^noctalia-backdrop"
+  place-within-backdrop true
+}
+
+window-rule {
+  // Rounded corners for a modern look.
+  geometry-corner-radius 20
+
+  // Clips window contents to the rounded corner boundaries.
+  clip-to-geometry true
+}
+
+// Floating Noctalia settings window.
+window-rule {
+  match app-id="dev.noctalia.Noctalia"
+  open-floating true
+  default-column-width { fixed 1080; }
+  default-window-height { fixed 920; }
+}
+
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+    tiled-state true
+    draw-border-with-background false
+}
+
+window-rule {
+    match app-id=r#"^org\.gnome\."#
+    draw-border-with-background false
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+window-rule {
+    match app-id="zen"
+    match app-id="com.mitchellh.ghostty"
+    draw-border-with-background false
+}
+
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+    open-focused false
+}
+
+include "windowrules.kdl"
+include "outputs.kdl"
+include "binds.kdl"
+include "startup.kdl"
+
+include "noctalia.kdl"
