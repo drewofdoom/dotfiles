@@ -115,67 +115,30 @@ binds {
     Mod+W { toggle-column-tabbed-display; }
 
     // === Audio Controls ===
-    XF86AudioRaiseVolume allow-when-locked=true {
-      spawn "noctalia" "msg" "volume-up";
-    }
-    XF86AudioLowerVolume allow-when-locked=true {
-      spawn "noctalia" "msg" "volume-down";
-    }
-    XF86AudioMute allow-when-locked=true {
-      spawn "noctalia" "msg" "volume-mute";
-    }
-    XF86AudioMicMute allow-when-locked=true {
-      spawn "noctalia" "msg" "mic-mute";
-    }
-    XF86AudioNext allow-when-locked=true {
-      spawn "noctalia" "msg" "media" "next";
-    }
-    XF86AudioPlay allow-when-locked=true {
-      spawn "noctalia" "msg" "media" "toggle";
-    }
-    XF86AudioPrev allow-when-locked=true {
-      spawn "noctalia" "msg" "media" "previous";
-    }
-    XF86AudioStop allow-when-locked=true {
-      spawn "noctalia" "msg" "media" "stop";
-    }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "noctalia" "msg" "volume-up"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "noctalia" "msg" "volume-down"; }
+    XF86AudioMute allow-when-locked=true { spawn "noctalia" "msg" "volume-mute"; }
+    XF86AudioMicMute allow-when-locked=true { spawn "noctalia" "msg" "mic-mute"; }
+    XF86AudioNext allow-when-locked=true { spawn "noctalia" "msg" "media" "next"; }
+    XF86AudioPlay allow-when-locked=true { spawn "noctalia" "msg" "media" "toggle"; }
+    XF86AudioPrev allow-when-locked=true { spawn "noctalia" "msg" "media" "previous"; }
+    XF86AudioStop allow-when-locked=true { spawn "noctalia" "msg" "media" "stop"; }
 
     // === Brightness Controls ===
-    XF86MonBrightnessUp allow-when-locked=true {
-        spawn "noctalia" "msg" "brightness-up";
-    }
-    XF86MonBrightnessDown allow-when-locked=true {
-        spawn "noctalia" "msg" "brightness-down";
-    }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "noctalia" "msg" "brightness-up"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "noctalia" "msg" "brightness-down"; }
 
     // === Power ===
-    Mod+Shift+P hotkey-overlay-title="Power Off Monitors" {
-      power-off-monitors;
-    }
-    Ctrl+Alt+Delete hotkey-overlay-title="Session Panel" {
-      spawn "noctalia" "msg" "panel-toggle" "session";
-    }
-    Mod+Alt+L hotkey-overlay-title="Lock Screen" {
-      spawn "noctalia" "msg" "session" "lock";
-    }
+    Mod+Shift+P hotkey-overlay-title="Power Off Monitors" { power-off-monitors; }
+    Ctrl+Alt+Delete hotkey-overlay-title="Session Panel" { spawn "noctalia" "msg" "panel-toggle" "session"; }
+    Mod+Alt+L hotkey-overlay-title="Lock Screen" { spawn "noctalia" "msg" "session" "lock"; }
 
     // === Screenshot ===
-    Print hotkey-overlay-title="Screenshot: Area" {
-      screenshot;
-    }
-    Ctrl+Print hotkey-overlay-title="Screenshot: Screen" {
-      screenshot-screen;
-    }
-    Alt+Print hotkey-overlay-title="Screenshot: Window" {
-      screenshot-window;
-    }
+    Print hotkey-overlay-title="Screenshot: Area" { screenshot; }
+    Ctrl+Print hotkey-overlay-title="Screenshot: Screen" { screenshot-screen; }
+    Alt+Print hotkey-overlay-title="Screenshot: Window" { screenshot-window; }
 
     // === Miscellaneous ===
-    Mod+Shift+Slash {
-      show-hotkey-overlay;
-    }
-
-    Mod+Escape hotkey-overlay-title="Toggle Keyboard Shortcuts Inhibit" {
-      toggle-keyboard-shortcuts-inhibit;
-    }
+    Mod+Shift+Slash { show-hotkey-overlay; }
+    Mod+Escape hotkey-overlay-title="Toggle Keyboard Shortcuts Inhibit" { toggle-keyboard-shortcuts-inhibit; }
 }
