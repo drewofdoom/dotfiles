@@ -87,7 +87,7 @@ layout {
       on
       softness 2
       spread -2
-      offset x=6 y=6
+      offset x=15 y=15
     }
 
     // Comfortable gaps between windows
