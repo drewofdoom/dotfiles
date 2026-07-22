@@ -93,10 +93,10 @@ layer-rule {
 
 window-rule {
   // Rounded corners for a modern look.
-  geometry-corner-radius 20
+  geometry-corner-radius 6
 
   // Clips window contents to the rounded corner boundaries.
-  // clip-to-geometry true
+  clip-to-geometry true
 }
 
 include "windowrules.kdl"
