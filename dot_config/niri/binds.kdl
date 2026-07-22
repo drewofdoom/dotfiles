@@ -132,6 +132,7 @@ binds {
     Mod+Shift+P hotkey-overlay-title="Power Off Monitors" { power-off-monitors; }
     Ctrl+Alt+Delete hotkey-overlay-title="Session Panel" { spawn "noctalia" "msg" "panel-toggle" "session"; }
     Mod+Alt+L hotkey-overlay-title="Lock Screen" { spawn "noctalia" "msg" "session" "lock"; }
+    Mod+Shift+E { quit; }
 
     // === Screenshot ===
     Print hotkey-overlay-title="Screenshot: Area" { screenshot; }
