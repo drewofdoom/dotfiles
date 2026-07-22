@@ -137,6 +137,6 @@ window-rule {
 include "windowrules.kdl"
 include "outputs.kdl"
 include "binds.kdl"
-include "startup.kdl"
+// include "startup.kdl"
 
 include "noctalia.kdl"
