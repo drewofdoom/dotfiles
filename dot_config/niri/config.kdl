@@ -85,7 +85,7 @@ layout {
     shadow {
       // Turn on shadows
       on
-      softness 4
+      softness 1
       spread -1
       offset x=6 y=6
     }
