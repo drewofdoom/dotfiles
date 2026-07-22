@@ -50,8 +50,6 @@ binds {
     Mod+Right { focus-column-right; }
     Mod+End { focus-column-last; }
     Mod+Home { focus-column-first; }
-    Mod+WheelScrollUp { focus-window-up; }
-    Mod+WheelScrolldown { focus-window-down; }
     Mod+WheelScrollLeft { focus-column-left; }
     Mod+WheelScrollRight { focus-column-right; }
 
