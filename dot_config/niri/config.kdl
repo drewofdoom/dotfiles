@@ -6,14 +6,18 @@
 
 // === Misc Options ===
 hotkey-overlay {
+    // Don't display hotkey helper
     skip-at-startup
 }
 
+// Don't draw client-side decorations
 prefer-no-csd
 
+// Screenshot path
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
+    // slow down animations
     slowdown 1.7
 }
 
@@ -23,6 +27,7 @@ debug {
 }
 
 cursor {
+    // Set cursor options
     xcursor-theme "Bibata-Original-Classic"
     xcursor-size 22
     hide-when-typing
@@ -30,11 +35,20 @@ cursor {
 
 // === Variables ===
 environment {
+  // use Niri for desktop settings
   XDG_CURRENT_DESKTOP "niri"
-  XCURSOR_SIZE "14"
+
+  // Electron helper for wayland
   ELECTRON_OZONE_PLATFORM_HINT "auto"
+
+  // QT theming
   QT_QPA_PLATFORM "wayland"
   QT_QPA_PLATFORMTHEME "gtk3"
+
+  // helper for x11
+  XCURSOR_SIZE "14"
+
+  // Use zed as the default editor
   EDITOR "zed --wait"
 }
 
@@ -54,34 +68,43 @@ input {
     }
 
     trackball {
+        // Trackball acceleration
         accel-speed 0.2
         accel-profile "adaptive"
     }
 
+    // Focus follows mouse with scroll amount, but doesn't scroll too far
     focus-follows-mouse max-scroll-amount="10%"
 }
 
 // === Layout ===
 layout {
+    // Let Noctalia handle the background
     background-color "transparent"
+
+    // Comfortable gaps between windows
     gaps 16
 
     border {
+        // No border
         off
     }
 
     focus-ring {
+        // Minimal focus ring
         width 2
     }
 }
 
 recent-windows {
     highlight {
+        // Match corners from windows
         corner-radius 10
     }
 }
 
 blur {
+    // Nicer blur
     passes 1
     offset 3
     noise 0.2
@@ -90,24 +113,42 @@ blur {
 
 // === Rules ===
 layer-rule {
-  match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
   background-effect {
+    // Disable xray for all layers
     xray false
   }
 }
 
+// layer-rule {
+//   match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+//   background-effect {
+//     xray false
+//   }
+// }
+
 layer-rule {
   match namespace="^noctalia-backdrop"
+  // Noctalia background displays underneath the overview
+  // Blur settings are managed in Notalia settings panel --> Niri
   place-within-backdrop true
 }
 
 // Default window rules
 window-rule {
+  // Nice, minimal rounded corners
   geometry-corner-radius 10
+
+  // Clip to geometry to avoid corner overflow
   clip-to-geometry true
+
   background-effect {
-      blur true
-      xray false
+    // Noctalia only draws transparency when it's called for, so this does not incur a performance penalty
+
+    // Blur background behind all transparent windows
+    blur true
+
+    // Disable xray for all window backgrounds
+    xray false
   }
 }
 
