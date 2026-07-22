@@ -94,6 +94,9 @@ layout {
         // Minimal focus ring
         width 2
     }
+
+    // Center single column windows
+    always-center-single-column
 }
 
 recent-windows {
