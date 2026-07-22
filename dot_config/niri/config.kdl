@@ -96,7 +96,7 @@ window-rule {
   geometry-corner-radius 20
 
   // Clips window contents to the rounded corner boundaries.
-  clip-to-geometry true
+  // clip-to-geometry true
 }
 
 include "windowrules.kdl"
