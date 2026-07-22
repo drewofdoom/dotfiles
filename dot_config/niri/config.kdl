@@ -86,9 +86,8 @@ layout {
       // Turn on shadows
       on
       softness 4
-      spread -2
+      spread -1
       offset x=6 y=6
-      color "#000000"
     }
 
     // Comfortable gaps between windows
