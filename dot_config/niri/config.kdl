@@ -160,6 +160,7 @@ window-rule {
 include "binds.kdl"
 
 // local only
+include "binds_local.kdl"
 include "windowrules.kdl"
 include "outputs.kdl"
 include "noctalia.kdl"
