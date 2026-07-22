@@ -87,14 +87,12 @@ layout {
 
     border {
         // No border
-        on
-        width 4
+        off
     }
 
     focus-ring {
         // Minimal focus ring
-        off
-        // width 2
+        width 2
     }
 
     // Center single column windows
