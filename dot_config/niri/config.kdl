@@ -82,14 +82,6 @@ layout {
     // Let Noctalia handle the background
     background-color "transparent"
 
-    shadow {
-      // Turn on shadows
-      off
-      softness 1
-      spread -1
-      offset x=6 y=6
-    }
-
     // Comfortable gaps between windows
     gaps 16
 
