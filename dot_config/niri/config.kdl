@@ -82,6 +82,11 @@ layout {
     // Let Noctalia handle the background
     background-color "transparent"
 
+    shadow {
+      // Turn on shadows
+      on
+    }
+
     // Comfortable gaps between windows
     gaps 16
 
