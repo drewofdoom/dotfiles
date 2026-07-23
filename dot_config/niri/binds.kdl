@@ -18,6 +18,9 @@ binds {
     Mod+T hotkey-overlay-title="Launch: Terminal" {
       spawn "ghostty";
     }
+    Mod+N hotkey-overlay-title="Open Notepad" {
+      spawn "noctalia" "msg" "panel-toggle" "noctalia/notes:panel";
+    }
 
     // === Actions ===
     Mod+D repeat=false { toggle-overview; }
