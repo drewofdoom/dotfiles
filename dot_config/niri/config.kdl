@@ -133,6 +133,9 @@ window-rule {
   // Nice, minimal rounded corners
   geometry-corner-radius 10
 
+  // No background with border
+  draw-border-with-background false
+
   // Clip to geometry to avoid corner overflow
   clip-to-geometry true
 
