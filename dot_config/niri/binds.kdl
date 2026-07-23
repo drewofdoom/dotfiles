@@ -22,7 +22,7 @@ binds {
     // === Actions ===
     Mod+D repeat=false { toggle-overview; }
     Mod+C { center-column; }
-    Mod+Ctrl+C { center-visible-columns; }
+    Mod+Shift+C { center-visible-columns; }
     Mod+Q repeat=false { close-window; }
 
     // === Focus ===
