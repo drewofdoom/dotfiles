@@ -156,6 +156,7 @@ include "binds.kdl"
 include "binds_local.kdl"
 include "windowrules.kdl"
 include "outputs.kdl"
+include "startup.kdl"
 include "noctalia.kdl"
 
 // === Startup ===
