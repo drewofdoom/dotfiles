@@ -110,7 +110,6 @@ blur {
     // Nicer blur
     passes 1
     offset 3
-    noise 0.2
     saturation 1.5
 }
 
