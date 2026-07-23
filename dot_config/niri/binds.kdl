@@ -104,8 +104,8 @@ binds {
     Mod+Shift+F { fullscreen-window; }
     Mod+Alt+F { toggle-windowed-fullscreen; }
     Mod+M { maximize-window-to-edges; }
-    Mod+Minus { set-column-width "-10%"; }
-    Mod+Equal { set-column-width "+10%"; }
+    Mod+Minus { set-column-width "-5%"; }
+    Mod+Equal { set-column-width "+5%"; }
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-column-width-back; }
     Mod+Ctrl+R { switch-preset-window-height; }
