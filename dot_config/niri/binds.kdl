@@ -21,6 +21,9 @@ binds {
     Mod+N hotkey-overlay-title="Open Notepad" {
       spawn "noctalia" "msg" "panel-toggle" "noctalia/notes:panel";
     }
+    Mod+Shift+N hotkey-overlay-title="Start Noctalia" {
+      spawn "noctalia"
+    }
 
     // === Actions ===
     Mod+D repeat=false { toggle-overview; }
