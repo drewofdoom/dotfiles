@@ -5,8 +5,8 @@ vec3 sRGBToLinear(vec3 c) {
 
 // --- CONFIGURATION ---
 vec4 TRAIL_COLOR = vec4(sRGBToLinear(iCurrentCursorColor.rgb), iCurrentCursorColor.a); // for custom color: vec4(0.2, 0.6, 1.0, 0.5); (wrap in sRGBToLinear for correct brightness)
-const float DURATION = 0.2; // in seconds
-const float TRAIL_LENGTH = 0.5;
+const float DURATION = 0.1; // in seconds
+const float TRAIL_LENGTH = 0.2;
 const float BLUR = 2.0; // blur size in pixels (for antialiasing)
 
 // --- CONSTANTS for easing functions ---
@@ -149,7 +149,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord){
     // normalization & setup(-1, 1 coords)
     vec2 vu = normalize(fragCoord, 1.);
     vec2 offsetFactor = vec2(-.5, 0.5);
-    
+
     vec4 currentCursor = vec4(normalize(iCurrentCursor.xy, 1.), normalize(iCurrentCursor.zw, 0.));
     vec4 previousCursor = vec4(normalize(iPreviousCursor.xy, 1.), normalize(iPreviousCursor.zw, 0.));
 
@@ -157,11 +157,11 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord){
     vec2 centerCP = previousCursor.xy - (previousCursor.zw * offsetFactor);
 
     float sdfCurrentCursor = getSdfRectangle(vu, centerCC, currentCursor.zw * 0.5);
-    
+
      float lineLength = distance(centerCC, centerCP);
-	
+
      vec4 newColor = vec4(fragColor);
-	
+
      float minDist = currentCursor.w * 1.5;
      float progress = clamp((iTime - iTimeCursorChange) / DURATION, 0.0, 1.0);
      if (lineLength > minDist) {
@@ -187,7 +187,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord){
         vec2 v3_start = mix(v0, v3_full, TRAIL_LENGTH);
         vec2 v2_anim = mix(v2_start, v1, shrinkFactor);
         vec2 v3_anim = mix(v3_start, v0, shrinkFactor);
-        
+
         float sdfTrail_diag = getSdfParallelogram(vu, v0, v1, v2_anim, v3_anim);
 
         // --- Making rectangle sdf (straight moves) ---
