@@ -25,7 +25,7 @@ if status is-interactive
   ## -- linuxbrew
   if test -d /home/linuxbrew/.linuxbrew/bin
     fish_add_path -a /home/linuxbrew/.linuxbrew/bin
-    # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   end
 
   # Completions
