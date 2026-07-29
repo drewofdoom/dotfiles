@@ -9,3 +9,4 @@ window-padding-x = 8
 window-padding-y = 8
 cursor-style = bar
 background-opacity = 0.95
+custom-shader = shaders/cursor_smear.glsl
