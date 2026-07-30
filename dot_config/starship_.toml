@@ -70,7 +70,7 @@ symbol = ' '
 min_time = 1
 format = "[](fg:surface1 bg:none)[$duration]($style)[](fg:surface1 bg:surface1)[](fg:magenta bg:surface1)[󰥔](fg:surface1 bg:magenta)[](fg:magenta bg:none)"
 disabled = false
-style = "fg:white bg:surface1 bold"
+style = "fg:white bg:surface1"
 
 
 [git_branch]
@@ -124,7 +124,7 @@ symbol = " "
 [docker_context]
 symbol = " "
 format = "via [$symbol$context]($style) "
-style = "blue bold"
+style = "blue"
 only_with_files = true
 detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
 detect_folders = []
@@ -173,7 +173,7 @@ symbol = " "
 symbol = " "
 #pyenv_version_name = true
 format = 'via [${symbol}python (${version} )(\($virtualenv\) )]($style)'
-style = "bold yellow"
+style = "yellow"
 pyenv_prefix = "venv "
 python_binary = ["./venv/bin/python", "python", "python3", "python2"]
 detect_extensions = ["py"]
@@ -195,7 +195,7 @@ symbol = " "
 symbol = "ﯣ "
 
 [nodejs]
-format = "via [ Node.js $version](bold green) "
+format = "via [ Node.js $version](green) "
 detect_files = ["package.json", ".node-version"]
 detect_folders = ["node_modules"]
 
