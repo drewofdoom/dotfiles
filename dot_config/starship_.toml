@@ -42,14 +42,14 @@ disabled = false
 
 [username]
 format = "[  ](fg:yellow bg:surface1)[$user ]($style)[](fg:yellow bg:surface1)[ ](fg:surface1 bg:yellow)[](fg:yellow bg:none) "
-style_user = "italic fg:white bg:surface1"
-style_root = "italic fg:red bg:surface1"
+style_user = "fg:white bg:surface1"
+style_root = "fg:red bg:surface1"
 show_always = true
 
 # Third param
 [directory]
 format = "[](fg:surface1 bg:none)[$path]($style)[█](fg:surface1 bg:surface1)[](fg:blue bg:surface1)[ ](fg:surface1 bg:blue)[](fg:blue bg:none)"
-style = "italic fg:white bg:surface1"
+style = "fg:white bg:surface1"
 truncation_length = 3
 truncate_to_repo=false
 read_only = " "
