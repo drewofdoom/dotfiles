@@ -37,7 +37,8 @@ add_newline = true
 # Second param
 [hostname]
 ssh_only = false
-format = "[](fg:surface1 bg:none)[$hostname](italic bg:surface1)"
+ssh_symbol = "󰣀 "
+format = "[](fg:surface1 bg:none)[$ssh_symbol$hostname](italic bg:surface1)"
 disabled = false
 
 [username]
