@@ -58,8 +58,8 @@ read_only = " "
 ## SECOND LINE/ROW: Prompt
 # Prompt: param 2 └─
 [character]
-success_symbol = "[󱞪 ](magenta)"
-error_symbol = "[󱞪 ](red)"
+success_symbol = "[ 󱞪 ](magenta)"
+error_symbol = "[ 󱞪 ](red)"
 
 [line_break]
 disabled = false
