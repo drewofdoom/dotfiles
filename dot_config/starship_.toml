@@ -34,23 +34,22 @@ $character"""
 # Disable the blank line at the start of the prompt
 add_newline = true
 
-
 # Second param
 [hostname]
 ssh_only = false
-format = "[](fg:surface0 bg:none)[█](fg:surface0 bg:white)[$ssh_symbol$hostname](bold bg:surface0)"
+format = "[](fg:surface1 bg:none)[█](fg:surface1 bg:white)[$ssh_symbol$hostname](bold bg:surface1)"
 disabled = false
 
 [username]
-format = "[  ](fg:yellow bg:surface0)[$user ]($style)[](fg:yellow bg:surface0)[](fg:surface0 bg:yellow)[](fg:yellow bg:none) "
-style_user = "fg:white bg:surface0"
-style_root = "fg:red bg:surface0"
+format = "[  ](fg:yellow bg:surface1)[$user ]($style)[](fg:yellow bg:surface1)[](fg:surface1 bg:yellow)[](fg:yellow bg:none) "
+style_user = "fg:white bg:surface1"
+style_root = "fg:red bg:surface1"
 show_always = true
 
 # Third param
 [directory]
-format = "[](fg:surface0 bg:none)[$path]($style)[█](fg:surface0 bg:surface0)[](fg:blue bg:surface0)[](fg:surface0 bg:blue)[](fg:blue bg:none)"
-style = "fg:white bg:surface0 bold"
+format = "[](fg:surface1 bg:none)[$path]($style)[█](fg:surface1 bg:surface1)[](fg:blue bg:surface1)[](fg:surface1 bg:blue)[](fg:blue bg:none)"
+style = "fg:white bg:surface1 bold"
 truncation_length = 3
 truncate_to_repo=false
 read_only = " "
@@ -69,19 +68,19 @@ symbol = ' '
 
 [cmd_duration]
 min_time = 1
-format = "[](fg:surface0 bg:none)[$duration]($style)[](fg:surface0 bg:surface0)[](fg:magenta bg:surface0)[󰥔](fg:surface0 bg:magenta)[](fg:magenta bg:none)"
+format = "[](fg:surface1 bg:none)[$duration]($style)[](fg:surface1 bg:surface1)[](fg:magenta bg:surface1)[󰥔](fg:surface1 bg:magenta)[](fg:magenta bg:none)"
 disabled = false
-style = "fg:white bg:surface0 bold"
+style = "fg:white bg:surface1 bold"
 
 
 [git_branch]
-format = "[](fg:surface0 bg:none)[$branch]($style)[](fg:surface0 bg:surface0)[](fg:green bg:surface0)[](fg:surface0 bg:green)[](fg:green bg:none) "
-style = "fg:white bg:surface0"
+format = "[](fg:surface1 bg:none)[$branch]($style)[](fg:surface1 bg:surface1)[](fg:green bg:surface1)[](fg:surface1 bg:green)[](fg:green bg:none) "
+style = "fg:white bg:surface1"
 symbol = " "
 
 [git_status]
-format="[](fg:surface0 bg:none)[$all_status$ahead_behind]($style)[](fg:surface0 bg:surface0)[](fg:blue bg:surface0)[](fg:surface0 bg:blue)[](fg:blue bg:none) "
-style = "fg:white bg:surface0"
+format="[](fg:surface1 bg:none)[$all_status$ahead_behind]($style)[](fg:surface1 bg:surface1)[](fg:blue bg:surface1)[](fg:surface1 bg:blue)[](fg:blue bg:none) "
+style = "fg:white bg:surface1"
 conflicted = "="
 ahead =	"⇡${count}"
 behind = "⇣${count}"
