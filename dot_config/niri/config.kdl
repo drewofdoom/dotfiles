@@ -74,7 +74,7 @@ input {
     }
 
     // Focus follows mouse with scroll amount, but doesn't scroll too far
-    // focus-follows-mouse max-scroll-amount="10%"
+    focus-follows-mouse max-scroll-amount="10%"
 }
 
 // === Layout ===
