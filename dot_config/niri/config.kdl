@@ -69,7 +69,7 @@ input {
 
     trackball {
         // Trackball acceleration
-        accel-speed 0.2
+        accel-speed -0.5
         accel-profile "adaptive"
     }
 
