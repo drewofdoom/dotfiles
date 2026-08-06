@@ -52,31 +52,6 @@ environment {
   EDITOR "zed --wait"
 }
 
-// === Input ===
-input {
-    keyboard {
-        xkb {
-        }
-    }
-
-    touchpad {
-        tap
-        natural-scroll
-    }
-
-    trackpoint {
-    }
-
-    trackball {
-        // Trackball acceleration
-        accel-speed -0.8
-        accel-profile "adaptive"
-    }
-
-    // Focus follows mouse with scroll amount, but doesn't scroll too far
-    focus-follows-mouse max-scroll-amount="10%"
-}
-
 // === Layout ===
 layout {
     // Let Noctalia handle the background
@@ -157,6 +132,7 @@ include "binds.kdl"
 // local only
 include "binds_local.kdl"
 include "windowrules.kdl"
+include "input.kdl"
 include "outputs.kdl"
 include "startup.kdl"
 include "noctalia.kdl"
