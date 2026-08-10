@@ -50,10 +50,10 @@ binds {
     Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
 
     // Window directional navigation
-    Mod+Up { focus-window-up; }
-    Mod+Down { focus-window-down; }
-    Mod+Left { focus-column-left; }
-    Mod+Right { focus-column-right; }
+    Mod+Up { focus-window-or-monitor-up; }
+    Mod+Down { focus-window-or-monitor-down; }
+    Mod+Left { focus-column-or-monitor-left; }
+    Mod+Right { focus-column-or-monitor-right; }
     Mod+End { focus-column-last; }
     Mod+Home { focus-column-first; }
     Mod+WheelScrollLeft { focus-column-left; }
