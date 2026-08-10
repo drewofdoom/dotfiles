@@ -129,13 +129,15 @@ window-rule {
 // chezmoi, edit with `chezmoi edit --apply ~/.config/niri/binds.kdl`
 include "binds.kdl"
 
+// noctalia, managed by shell
+include "noctalia.kdl"
+
 // local only
-include "./local/binds_local.kdl"
-include "./local/windowrules.kdl"
-include "./local/input.kdl"
-include "./local/outputs.kdl"
-include "./local/startup.kdl"
-include "./local/noctalia.kdl"
+include "local/binds_local.kdl"
+include "local/windowrules.kdl"
+include "local/input.kdl"
+include "local/outputs.kdl"
+include "local/startup.kdl"
 
 // === Startup ===
 spawn-at-startup "noctalia"
