@@ -130,12 +130,12 @@ window-rule {
 include "binds.kdl"
 
 // local only
-include "binds_local.kdl"
-include "windowrules.kdl"
-include "input.kdl"
-include "outputs.kdl"
-include "startup.kdl"
-include "noctalia.kdl"
+include "./local/binds_local.kdl"
+include "./local/windowrules.kdl"
+include "./local/input.kdl"
+include "./local/outputs.kdl"
+include "./local/startup.kdl"
+include "./local/noctalia.kdl"
 
 // === Startup ===
 spawn-at-startup "noctalia"
