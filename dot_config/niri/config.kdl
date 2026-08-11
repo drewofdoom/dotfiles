@@ -133,6 +133,7 @@ include "binds.kdl"
 include "noctalia.kdl"
 
 // local only
+include "local/environment.kdl"
 include "local/binds_local.kdl"
 include "local/windowrules.kdl"
 include "local/input.kdl"
