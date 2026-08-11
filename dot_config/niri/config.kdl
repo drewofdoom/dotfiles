@@ -45,6 +45,9 @@ environment {
   QT_QPA_PLATFORM "wayland"
   QT_QPA_PLATFORMTHEME "gtk3"
 
+  // GDK
+  GDK_BACKEND "wayland"
+
   // helper for x11
   XCURSOR_SIZE "24"
 
