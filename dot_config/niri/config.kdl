@@ -25,7 +25,7 @@ debug {
 cursor {
     // Set cursor options
     // xcursor-theme "Bibata-Modern-Classic"
-    xcursor-theme "Oreo Black Cursors"
+    xcursor-theme "oreo-black-cursors"
     xcursor-size 22
     hide-when-typing
 }
