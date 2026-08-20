@@ -1,8 +1,0 @@
-# ~/.config/pipewire/pipewire.conf.d/10-disable-hfp.conf
-context.modules = [
-    {
-        name = libpipewire-module-bluetooth-policy
-        args = { auto_switch_profile = false }
-        flags = [ "ifexists" ]
-    }
-]
