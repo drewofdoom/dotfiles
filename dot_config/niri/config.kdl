@@ -42,7 +42,7 @@ environment {
   QT_QPA_PLATFORMTHEME "gtk3"
 
   // helper for x11
-  XCURSOR_SIZE "24"
+  XCURSOR_SIZE "22"
 
   // Use zed as the default editor
   EDITOR "zed --wait"
