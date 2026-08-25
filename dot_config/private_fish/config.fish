@@ -103,4 +103,11 @@ if status is-interactive
       ug -zF $argv
     end
   end
+
+  ## -- Zed editor override
+  if test -f $HOME/.local/bin/zed
+    function zed
+      $HOME/.local/bin/zed $argv
+    end
+  end
 end
