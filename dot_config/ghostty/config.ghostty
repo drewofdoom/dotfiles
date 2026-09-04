@@ -8,4 +8,4 @@ window-width = 120
 window-padding-x = 8
 window-padding-y = 8
 cursor-style = bar
-mouse-scroll-multiplier = precision:0.2
+mouse-scroll-multiplier = precision:0.3,discrete:1.5
