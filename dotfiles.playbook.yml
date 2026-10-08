@@ -1,0 +1,48 @@
+---
+- name: Deploy drewofdoom's dotfiles
+  hosts: localhost
+  connection: local
+  gather_facts: true
+  gather_subset: min
+  vars:
+    home_dir: "{{ lookup('env', 'HOME') }}"
+    home_config_dir: "{{ home_dir }}/.config"
+  tasks:
+    - name: Get repo config folder list
+      register: repo_config_folder_list
+      ansible.builtin.find:
+        paths:
+          - "config"
+        file_type: directory
+        recurse: false
+
+    - name: Create local .config folders
+      loop: "{{ repo_config_folder_list.files }}"
+      loop_control:
+        label: "{{ home_config_dir }}/{{ item.path | basename }}"
+      ansible.builtin.file:
+        path: "{{ home_config_dir }}/{{ item.path | basename }}"
+        state: directory
+        mode: "{{ item.mode }}"
+
+    - name: Create local .config/* symlinks (per folder)
+      loop: "{{ repo_config_folder_list.files | map(attribute='path') | map('basename') }}"
+      loop_control:
+        loop_var: repo_config_subdir
+      ansible.builtin.include_tasks: ./tasks/config_symlinks.tasks.yaml
+
+    - name: Create local .ssh folder
+      ansible.builtin.file:
+        path: "{{ home_dir }}/.ssh"
+        state: directory
+        owner: "{{ ansible_facts.user_uid }}"
+        group: "{{ ansible_facts.user_gid }}"
+        mode: u=rwx,go=
+
+    - name: Symlink ssh config file
+      ansible.builtin.file:
+        src: "{{ playbook_dir }}/ssh/config"
+        path: "{{ home_dir }}/.ssh/config"
+        state: link
+        force: true
+...

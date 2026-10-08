@@ -1,0 +1,9 @@
+[input.keyboard]
+layout = "us"
+
+[input.mouse]
+accel_profile = "flat"
+
+[input.cursor]
+hide_when_typing = true
+hide_timeout_ms = 10000

@@ -1,0 +1,31 @@
+---
+- name: ---- PROCESS {{ repo_config_subdir | upper }} ----
+  ansible.builtin.debug:
+    msg: ""
+
+- name: Map {{ repo_config_subdir }}
+  register: subdir_map
+  ansible.builtin.find:
+    path: "{{ 'config/' + repo_config_subdir }}"
+    file_type: any
+    recurse: true
+
+- name: Create sub-folders
+  loop: "{{ subdir_map.files | selectattr('isdir') | sort(attribute='path') }}"
+  loop_control:
+    label: "{{ item.path }}"
+  ansible.builtin.file:
+    path: "{{ home_dir + '/.' + item.path }}"
+    state: directory
+    mode: "{{ item.mode }}"
+
+- name: Create symlinks
+  loop: "{{ subdir_map.files | rejectattr('isdir') }}"
+  loop_control:
+    label: "{{ item.path }}"
+  ansible.builtin.file:
+    src: "{{ playbook_dir + '/' + item.path }}"
+    path: "{{ home_dir + '/.' + item.path }}"
+    state: link
+    force: true
+...

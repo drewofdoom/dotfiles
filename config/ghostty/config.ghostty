@@ -1,0 +1,7 @@
+command = fish
+shell-integration = fish
+theme = noctalia
+font-family = Maple Mono
+window-padding-x = 4
+window-padding-y = 4
+window-padding-color = extend

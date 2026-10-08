@@ -1,0 +1,30 @@
+# Layer rules
+[[layer_rule]]
+match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+blur = true
+blur_ignore_alpha = 0.5
+blur_popups = true
+blur_optimized = false
+
+# --- General Window Rules ---
+# Floating by app id
+[[window_rule]]
+match.app_id = "^(org.gnome.DejaDup|Emulator|zenity|xdg-desktop-portal|org.pulseaudio.pavucontrol|dev.noctalia.Noctalia|org.gnome.Decibels)$"
+default_floating = true
+
+# Floating dialogs by title
+[[window_rule]]
+match.title = "(Picture in picture|Picture-in-Picture|AppImage Installer|Open File|Select|Choose a wallpaper|Open Folder|Save As|Library|Choose Where to Download|File Operation Progress|Rename|Copy Files|Move Files|Search Files|All Files|Save Project|Sign In|Preferences)"
+default_floating = true
+
+# --- App-Specific Window Rules ---
+# Umbriel Share Picker
+[[window_rule]]
+match.app_id = "^dev.noctalia.UmbrielSharePicker$"
+default_floating = true
+
+# Zed open dialogs
+[[window_rule]]
+match.app_id = "^dev.zed.Zed$"
+match.title = "Zed —"
+default_floating = true

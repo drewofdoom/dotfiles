@@ -1,0 +1,64 @@
+[general]
+xwayland = true
+xwayland_native_resolution = true
+show_cheatsheet = false
+
+[include]
+files = [
+    "input.toml",
+    "binds.toml",
+    "rules.toml",
+]
+
+# Machine-specific files
+[include.optional]
+files = [
+    "local/outputs.toml",
+    "local/general.toml",
+    "local/rules.toml",
+    "noctalia.toml",
+]
+
+[environment]
+# Force Electron apps (Hermes desktop) onto native Wayland ozone instead of
+# XWayland. Hermes' own default pins itself to X11 on the proprietary NVIDIA
+# driver (Electron GPU process crashes on Wayland ozone, Chromium #126013);
+# this hint overrides that, which also avoids the xwayland-satellite
+# copy/paste quirks. Umbriel passes these to every app it launches and
+# publishes them into the systemd user environment.
+ELECTRON_OZONE_PLATFORM_HINT = "wayland"
+XCURSOR_THEME = "Bibata-Modern-Ice"
+
+[input]
+window_drag_toggle = "floating"
+
+# Cursor theme from bibata-cursor-theme. Umbriel resolves cursors through its
+# own libXcursor manager, which reads this key — the GNOME gsettings
+# org.gnome.desktop.interface cursor-theme does NOT reach it, so the cursor
+# stayed Adwaita until this was set. Umbriel also exports XCURSOR_THEME from
+# here for Xwayland apps. Hot-reloads on save.
+[input.cursor]
+theme = "Bibata-Modern-Ice"
+
+[appearance]
+prefer_no_csd = true
+border_width = 2
+corner_radius = 10
+drag_opacity = 0.95
+opaque_fullscreen = true
+
+[appearance.blur]
+enabled = true
+optimized = false
+passes = 1
+radius = 4
+noise = 0.02
+brightness = 0.9
+contrast = 0.9
+saturation = 1.1
+
+[appearance.shadow]
+enabled = true
+softness = 10
+offset_x = 2
+offset_y = 2
