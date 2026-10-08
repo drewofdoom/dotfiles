@@ -4,8 +4,6 @@ home_config_dir: "{{ home_dir }}/.config"
 packages:
   brew:
     # Formulae
-    - ansible
-    - ansible-lint
     - aria2
     - atuin
     - bat
