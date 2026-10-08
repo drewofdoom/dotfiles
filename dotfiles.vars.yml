@@ -28,6 +28,7 @@ packages:
     - homebrew/cask/font-maple-mono
   flatpak:
     - org.telegram.desktop
+    - com.discordapp.Discord
     - app.zen_browser.zen
     - com.protonvpn.www
     - com.slack.Slack
