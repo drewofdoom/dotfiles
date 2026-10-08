@@ -211,10 +211,10 @@ enter_accept = true
 #   "apt",
 #   "cargo",
 #   "composer",
-#   "dnf",
+  "dnf",
 #   "docker",
 #   "dotnet",
-#   "git",
+  "git",
 #   "go",
 #   "ip",
 #   "jj",
@@ -224,9 +224,9 @@ enter_accept = true
 #   "npm",
 #   "pecl",
 #   "pnpm",
-#   "podman",
+  "podman",
 #   "port",
-#   "systemctl",
+  "systemctl",
 #   "tmux",
 #   "yarn",
 # ]
@@ -236,8 +236,8 @@ enter_accept = true
 
 ## Set commands that will be completely ignored from stats
 # ignored_commands = [
-#   "cd",
-#   "ls",
+  "cd",
+  "ls",
 #   "vi"
 # ]
 
