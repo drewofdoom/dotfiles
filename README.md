@@ -25,3 +25,17 @@ Then just run the playbook:
 `ansible-galaxy playbook dotfiles.playbook.yml`
 
 It automatically links everything (forced, so it will overwrite files that already exist by design) to wherever you pulled this repo to. Suggested to put it into `~/Projects` with the rest of your git projects.
+
+## Post-deployment steps
+
+Log into atuin for sync
+
+`atuin login`
+
+Log into GitHub with gh
+
+`gh auth login`
+
+Update tldr (swap to `tldr --update` when brew ships a fixed bottle)
+
+`tldr-update`
