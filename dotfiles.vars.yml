@@ -1,0 +1,39 @@
+---
+home_dir: "{{ lookup('env', 'HOME') }}"
+home_config_dir: "{{ home_dir }}/.config"
+packages:
+  brew:
+    # Formulae
+    - ansible
+    - ansible-lint
+    - aria2
+    - atuin
+    - bat
+    - btop
+    - curl
+    - dust
+    - eza
+    - fd
+    - flac
+    - gh
+    - lame
+    - lua
+    - opus
+    - sox
+    - tldr
+    - ugrep
+    - unar
+    - unzip
+    - yazi
+    - zoxide
+    # Casks
+    - homebrew/cask/font-maple-mono
+  flatpak:
+    - org.telegram.desktop
+    - org.equicord.equibop
+    - app.zen_browser.zen
+    - com.protonvpn.www
+    - com.slack.Slack
+    - io.github.lullabyX.sone
+    - net.nokyan.Resources
+...
