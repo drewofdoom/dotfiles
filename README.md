@@ -1,51 +1,23 @@
 # Drewofdoom's Dotfiles
 
-This repository contains dotfiles for managing the host environment, organized by location rather than category for direct deployment.
+Simple dotfiles management.
 
-## Structure
+No need for tools like chezmoi that require you to modify the files in the repo, then redeploy them every time. Everything is a simple symlink.
 
-### Shell Configurations
-- `.bashrc` - Bash user configuration
-- `.bash_profile` - Bash login shell configuration  
-- `.zshrc` - Zsh user configuration
-- `.profile` - Generic profile configuration
+Watch out for merge conflicts if you often use multiple machines. This is pretty perfect for when you operate a single machine normally, then have a laptop or similar that you use less often.
 
-### GUI Configurations
-- `.config/umbriel/config.toml` - Umbriel compositor settings
-- `.config/gtk-3.0/settings.ini` - GTK theme settings
+Designed for use with ublue systems that already have brew installed. Will fail without brew and flatpak.
 
-### System Configurations
-- `.ssh/config` - SSH client configuration
+Obviously, these are personal dotfiles. If you're reading this and you are not me, don't just install this stuff. Cherry pick what you want from my dotfiles and adapt them for your own.
 
-### Custom Tools
-- `.local/bin/my-tool` - Sample custom tool (executable)
+## Installation
 
-## Deployment
+Install ansible via pip. Don't install it through homebrew, as it will cause issues with ansible lint not being able to find installed collections.
 
-Use Ansible for deployment:
+`pip install --user ansible ansible-lint ansible-navigator`
 
-```bash
-ansible-playbook ansible/playbooks/deploy-dotfiles.yml -t shell
-git add .
-git commit -m "Initial dotfiles scaffold"
-```
+Then just run the playbook:
 
-Tags available:
-- `shell` - Shell configurations
-- `gui` - GUI configurations  
-- `system` - System configurations
-- `tools` - Custom tools
+`ansible-galaxy playbook dotfiles.playbook.yml`
 
-## Usage
-
-The files contain example content suitable for an Atomic Fedora/Bluefin workstation with:
-- Shell prompt customization
-- GTK/Nord theme integration
-- SSH configuration
-- Custom tool scaffolding
-
-## Notes
-
-- All files maintain leading dots for direct location mapping
-- No symlinks are created in this repository - ansible creates them during deployment
-- Structure allows selective deployment via tags
+It automatically links everything (forced, so it will overwrite files that already exist by design) to wherever you pulled this repo to. Suggested to put it into `~/Projects` with the rest of your git projects.
