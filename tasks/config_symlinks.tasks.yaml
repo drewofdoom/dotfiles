@@ -1,7 +1,7 @@
 ---
 - name: ---- PROCESS {{ repo_config_subdir | upper }} ----
   ansible.builtin.debug:
-    msg: ""
+    msg: "Creating sub-folders and symlinks for {{ playbook_dir + '/' + repo_config_subdir }}"
 
 - name: Map {{ repo_config_subdir }}
   register: subdir_map

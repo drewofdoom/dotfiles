@@ -4,10 +4,33 @@
   connection: local
   gather_facts: true
   gather_subset: min
-  vars:
-    home_dir: "{{ lookup('env', 'HOME') }}"
-    home_config_dir: "{{ home_dir }}/.config"
+  vars_files:
+    - dotfiles.vars.yml
   tasks:
+    - name: ---- PROCESS REQUIREMENTS ----
+      ansible.builtin.debug:
+        msg: "Install requirements from Brew and Flatpak"
+
+    - name: Install packages with Brew
+      community.general.homebrew:
+        update_homebrew: true
+        name: "{{ packages.brew }}"
+
+    - name: Add the Flathub Flatpak repository
+      loop:
+        - user
+        - system
+      community.general.flatpak_remote:
+        name: flathub
+        state: present
+        flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+        method: "{{ item }}"
+
+    - name: Install packages with Flatpak
+      community.general.flatpak:
+        name: "{{ packages.flatpak }}"
+
+
     - name: Get repo config folder list
       register: repo_config_folder_list
       ansible.builtin.find:
