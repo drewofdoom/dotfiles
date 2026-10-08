@@ -53,19 +53,4 @@
       loop_control:
         loop_var: repo_config_subdir
       ansible.builtin.include_tasks: ./tasks/config_symlinks.tasks.yaml
-
-    - name: Create local .ssh folder
-      ansible.builtin.file:
-        path: "{{ home_dir }}/.ssh"
-        state: directory
-        owner: "{{ ansible_facts.user_uid }}"
-        group: "{{ ansible_facts.user_gid }}"
-        mode: u=rwx,go=
-
-    - name: Symlink ssh config file
-      ansible.builtin.file:
-        src: "{{ playbook_dir }}/ssh/config"
-        path: "{{ home_dir }}/.ssh/config"
-        state: link
-        force: true
 ...
