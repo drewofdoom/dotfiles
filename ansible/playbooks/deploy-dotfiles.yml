@@ -1,0 +1,68 @@
+---
+- hosts: localhost
+  become: false
+  vars_files:
+    - vars/locations.yml
+
+  tasks:
+    - name: Deploy shell configurations
+      file:
+        src: "{{ playbook_dir }}/.bashrc"
+        dest: "{{ lookup('env', 'HOME') }}/.bashrc"
+        state: link
+      tags: shell
+
+    - name: Deploy bash profile
+      file:
+        src: "{{ playbook_dir }}/.bash_profile"
+        dest: "{{ lookup('env', 'HOME') }}/.bash_profile"
+        state: link
+      tags: shell
+
+    - name: Deploy zsh configuration
+      file:
+        src: "{{ playbook_dir }}/.zshrc"
+        dest: "{{ lookup('env', 'HOME') }}/.zshrc"
+        state: link
+      tags: shell
+
+    - name: Deploy profile configuration
+      file:
+        src: "{{ playbook_dir }}/.profile"
+        dest: "{{ lookup('env', 'HOME') }}/.profile"
+        state: link
+      tags: shell
+
+    - name: Deploy GUI configurations
+      file:
+        src: "{{ playbook_dir }}/.config/umbriel/config.toml"
+        dest: "{{ lookup('env', 'HOME') }}/.config/umbriel/config.toml"
+        state: link
+      tags: gui
+
+    - name: Deploy GTK theme settings
+      file:
+        src: "{{ playbook_dir }}/.config/gtk-3.0/settings.ini"
+        dest: "{{ lookup('env', 'HOME') }}/.config/gtk-3.0/settings.ini"
+        state: link
+      tags: gui
+
+    - name: Deploy SSH configuration
+      file:
+        src: "{{ playbook_dir }}/.ssh/config"
+        dest: "{{ lookup('env', 'HOME') }}/.ssh/config"
+        state: link
+      tags: system
+
+    - name: Deploy custom tools
+      file:
+        src: "{{ playbook_dir }}/.local/bin/my-tool"
+        dest: "{{ lookup('env', 'HOME') }}/.local/bin/my-tool"
+        state: link
+      tags: tools
+
+    - name: Ensure tools are executable
+      file:
+        path: "{{ lookup('env', 'HOME') }}/.local/bin/my-tool"
+        mode: "u+x"
+      tags: tools
