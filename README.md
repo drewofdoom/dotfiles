@@ -12,9 +12,13 @@ Obviously, these are personal dotfiles. If you're reading this and you are not m
 
 ## Installation
 
-Install ansible via pip. Don't install it through homebrew, as it will cause issues with ansible lint not being able to find installed collections.
+Install ansible via pip. Don't install it through homebrew, as it will cause issues with ansible lint not being able to find installed collections:
 
 `pip install --user ansible ansible-lint ansible-navigator`
+
+Install the community.general collection:
+
+`ansible-galaxy collection install community.general`
 
 Then just run the playbook:
 
