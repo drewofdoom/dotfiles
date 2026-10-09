@@ -39,3 +39,7 @@ Log into GitHub with gh
 Update tldr (swap to `tldr --update` when brew ships a fixed bottle)
 
 `tldr-update`
+
+Install proton pass-cli
+
+`brew install protonpass/tap/pass-cli`
