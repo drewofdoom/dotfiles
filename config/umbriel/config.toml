@@ -13,6 +13,7 @@ files = [
 # Machine-specific files
 [include.optional]
 files = [
+    "local/input.toml",
     "local/outputs.toml",
     "local/general.toml",
     "local/rules.toml",
