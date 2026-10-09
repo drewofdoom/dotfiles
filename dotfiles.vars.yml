@@ -7,6 +7,7 @@ packages:
     - aria2
     - atuin
     - bat
+    - bbrew
     - btop
     - curl
     - dust
