@@ -9,6 +9,7 @@ packages:
     - bat
     - bbrew
     - btop
+    - cargo
     - curl
     - dust
     - eza

@@ -85,4 +85,5 @@ if status is-interactive
     end
 end
 
+fish_add_path -p $HOME/.local/bin $HOME/.cargo/bin
 starship init fish | source

@@ -2,6 +2,9 @@
 xwayland = true
 xwayland_native_resolution = true
 show_cheatsheet = false
+autostart = [
+    "noctalia"
+]
 
 [include]
 files = [
@@ -14,9 +17,9 @@ files = [
 [include.optional]
 files = [
     "local/input.toml",
-    "local/outputs.toml",
     "local/general.toml",
     "local/rules.toml",
+    "local/outputs.toml",
     "noctalia.toml",
 ]
 
@@ -29,6 +32,8 @@ files = [
 # publishes them into the systemd user environment.
 ELECTRON_OZONE_PLATFORM_HINT = "wayland"
 XCURSOR_THEME = "Bibata-Modern-Ice"
+PROTON_PASS_KEY_PROVIDER = "keyring"
+PROTON_PASS_LINUX_KEYRING = "dbus"
 
 [input]
 window_drag_toggle = "floating"
