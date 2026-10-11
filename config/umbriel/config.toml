@@ -4,8 +4,6 @@ xwayland_native_resolution = true
 show_cheatsheet = false
 autostart = [
     "noctalia",
-    "gamemoded -d",
-    "arrpc"
 ]
 
 [include]
