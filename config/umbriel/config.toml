@@ -2,9 +2,6 @@
 xwayland = true
 xwayland_native_resolution = true
 show_cheatsheet = false
-autostart = [
-    "noctalia"
-]
 
 [include]
 files = [
