@@ -37,17 +37,6 @@ XCURSOR_THEME = "Bibata-Modern-Ice"
 PROTON_PASS_KEY_PROVIDER = "keyring"
 PROTON_PASS_LINUX_KEYRING = "dbus"
 
-[input]
-window_drag_toggle = "floating"
-
-# Cursor theme from bibata-cursor-theme. Umbriel resolves cursors through its
-# own libXcursor manager, which reads this key — the GNOME gsettings
-# org.gnome.desktop.interface cursor-theme does NOT reach it, so the cursor
-# stayed Adwaita until this was set. Umbriel also exports XCURSOR_THEME from
-# here for Xwayland apps. Hot-reloads on save.
-[input.cursor]
-theme = "Bibata-Modern-Ice"
-
 [appearance]
 prefer_no_csd = true
 border_width = 2

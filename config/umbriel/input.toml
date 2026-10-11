@@ -1,6 +1,10 @@
+[input]
+window_drag_toggle = "floating"
+
 [input.keyboard]
 layout = "us"
 
 [input.cursor]
 hide_when_typing = true
 hide_timeout_ms = 10000
+theme = "Bibata-Modern-Ice"
