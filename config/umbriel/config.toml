@@ -1,6 +1,6 @@
 [general]
 xwayland = true
-xwayland_native_resolution = true
+xwayland_native_resolution = false
 show_cheatsheet = false
 
 [include]
