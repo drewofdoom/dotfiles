@@ -21,13 +21,6 @@ files = [
 ]
 
 [environment]
-# Force Electron apps (Hermes desktop) onto native Wayland ozone instead of
-# XWayland. Hermes' own default pins itself to X11 on the proprietary NVIDIA
-# driver (Electron GPU process crashes on Wayland ozone, Chromium #126013);
-# this hint overrides that, which also avoids the xwayland-satellite
-# copy/paste quirks. Umbriel passes these to every app it launches and
-# publishes them into the systemd user environment.
-ELECTRON_OZONE_PLATFORM_HINT = "wayland"
 XCURSOR_THEME = "Bibata-Modern-Ice"
 PROTON_PASS_KEY_PROVIDER = "keyring"
 PROTON_PASS_LINUX_KEYRING = "dbus"
