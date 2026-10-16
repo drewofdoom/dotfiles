@@ -84,8 +84,13 @@
 "Mod+M" = "window-toggle-maximize-to-edges"
 
 # === Floating ===
-"Mod+T" = { action = "window-toggle-floating", repeat = false }
-"Mod+Shift+T" = "window-focus-switch-floating"
+"Mod+Ctrl+T" = { action = "window-toggle-floating", repeat = false }
+"Mod+T" = "window-focus-switch-floating"
+
+# === Tabbed ===
+"Mod+Ctrl+W" = { action = "column-toggle-tabbed", repeat = false }
+"Mod+W" = "column-focus-tab-next"
+"Mod+Shift+W" = "column-focus-tab-previous"
 
 # === Power (monitors) ===
 "Mod+Shift+P" = "dpms-off"
@@ -118,8 +123,8 @@
 "Ctrl+Print" = { action = "spawn:noctalia msg screenshot-fullscreen", repeat = false }
 
 # === Screen recording (region via slurp / full; re-press to stop) ===
-"Mod+Shift+R" = { action = "spawn:screen-record", repeat = false }
-"Mod+Shift+Alt+R" = { action = "spawn:screen-record --full", repeat = false }
+"Mod+Shift+U" = { action = "spawn:screen-record", repeat = false }
+"Mod+Shift+Alt+U" = { action = "spawn:screen-record --full", repeat = false }
 
 # === Misc ===
 "Mod+Shift+Slash" = { action = "cheatsheet-toggle", repeat = false }
