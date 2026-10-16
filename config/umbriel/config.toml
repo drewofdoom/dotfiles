@@ -21,6 +21,8 @@ files = [
 ]
 
 [environment]
+ELECTRON_OZONE_PLATFORM_HINT = "auto"
+SDL_VIDEODRIVER = "wayland"
 XCURSOR_THEME = "Bibata-Modern-Ice"
 PROTON_PASS_KEY_PROVIDER = "keyring"
 PROTON_PASS_LINUX_KEYRING = "dbus"
