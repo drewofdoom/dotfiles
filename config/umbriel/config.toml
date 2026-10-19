@@ -26,7 +26,6 @@ SDL_VIDEODRIVER = "wayland"
 XCURSOR_THEME = "Bibata-Modern-Ice"
 PROTON_PASS_KEY_PROVIDER = "keyring"
 PROTON_PASS_LINUX_KEYRING = "dbus"
-PATH = "/var/home/drew/.local/bin:/var/home/drew/.cargo/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin"
 
 [appearance]
 prefer_no_csd = true

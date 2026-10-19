@@ -87,23 +87,7 @@ if status is-interactive
     # the history commands defined above.
     atuin init fish | source
 
-    # tldr: the brew build's own `tldr --update` fails to fetch
-    # (its linked libcurl 8.22 rejects the codeload redirect), but lookups work
-    # fine against pages installed under ~/.tldrc/tldr. Update via curl+unzip
-    # instead. Note `--clear-cache` deletes that pages directory outright, so
-    # never call it after installing. Drop this once brew ships a fixed bottle.
-    function tldr-update --description 'refresh tldr pages (works around brew build)'
-        set -l tmp (mktemp -d)
-        curl -sL -o $tmp/tldr.zip https://github.com/tldr-pages/tldr/archive/main.zip || return 1
-        unzip -q $tmp/tldr.zip -d $tmp || return 1
-        mkdir -p ~/.tldrc/tldr
-        rm -rf ~/.tldrc/tldr/pages
-        cp -r $tmp/tldr-main/pages ~/.tldrc/tldr/
-        cp $tmp/tldr-main/LICENSE.md ~/.tldrc/tldr/ 2>/dev/null
-        rm -rf $tmp
-        echo "tldr pages updated"
-    end
-end
+    fish_add_path -p $HOME/.local/bin $HOME/.cargo/bin
 
-fish_add_path -p $HOME/.local/bin $HOME/.cargo/bin
-starship init fish | source
+    starship init fish | source
+end
