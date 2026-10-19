@@ -22,19 +22,39 @@ if status is-interactive
     #     swallowed as that value ("invalid value 'x' for '--icons'"). Giving
     #     it an explicit `=auto` and putting paths first avoids both.
     function ls --description 'eza --icons=auto'
-        eza --icons=auto $argv .
+        if test (count $argv) -gt 0
+            eza --icons=auto $argv
+        else
+            eza --icons=auto .
+        end
     end
     function ll --description 'eza -l --icons=auto --git'
-        eza -l --icons=auto --git $argv .
+        if test (count $argv) -gt 0
+            eza -l --icons=auto --git $argv
+        else
+            eza -l --icons=auto --git .
+        end
     end
     function la --description 'eza -l -a --icons=auto --git'
-        eza -l -a --icons=auto --git $argv .
+        if test (count $argv) -gt 0
+            eza -l -a --icons=auto --git $argv
+        else
+            eza -l -a --icons=auto --git .
+        end
     end
     function lt --description 'eza --tree --level=2 --icons=auto'
-        eza --tree --level=2 --icons=auto $argv .
+        if test (count $argv) -gt 0
+            eza --tree --level=2 --icons=auto $argv
+        else
+            eza --tree --level=2 --icons=auto .
+        end
     end
     function lta --description 'eza --tree --level=2 -a --icons=auto --git'
-        eza --tree --level=2 -a --icons=auto --git $argv .
+        if test (count $argv) -gt 0
+            eza --tree --level=2 -a --icons=auto --git $argv
+        else
+            eza --tree --level=2 -a --icons=auto --git .
+        end
     end
 
     # pager -> bat. $PAGER carries bat's own flags; $LESS stays genuine less flags
