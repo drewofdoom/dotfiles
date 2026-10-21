@@ -1,6 +1,6 @@
 [general]
 xwayland = true
-xwayland_native_resolution = false
+xwayland_native_resolution = true
 show_cheatsheet = false
 
 [include]
@@ -17,6 +17,7 @@ files = [
     "local/general.toml",
     "local/rules.toml",
     "local/outputs.toml",
+    "local/security.toml",
     "noctalia.toml",
 ]
 
