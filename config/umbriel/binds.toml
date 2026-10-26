@@ -3,8 +3,7 @@
 # Launchers
 "Mod+Return" = "spawn:ghostty"
 "Mod+Space" = "spawn:noctalia msg panel-toggle launcher"
-"Mod+B" = "spawn:helium"
-# "Mod+B" = "spawn:flatpak run com.brave.Browser"
+"Mod+B" = "spawn:zen-browser"
 "Mod+E" = "spawn:nautilus"
 
 # Actions
