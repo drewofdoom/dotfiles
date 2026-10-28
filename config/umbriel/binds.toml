@@ -7,9 +7,7 @@
 "Mod+E" = "spawn:nautilus"
 
 # Actions
-"Mod+D" = { action = "overview-toggle", repeat = false }
 "Mod+C" = "column-center"
-"Mod+Shift+C" = "column-center"
 "Mod+Q" = { action = "window-close", repeat = false }
 "Mod+S" = { action = "scratchpad-toggle", repeat = false }
 "Mod+Ctrl+S" = "window-toggle-scratchpad"
@@ -65,10 +63,11 @@
 "Mod+Page_Down" = { action = "workspace-next", cooldown_ms = 250 }
 "Mod+WheelUp" = { action = "workspace-previous", cooldown_ms = 250 }
 "Mod+WheelDown" = { action = "workspace-next", cooldown_ms = 250 }
+"Mod+MouseMiddle" = "layout-scroll-drag"
 
 # === Focus: window directional ===
-"Mod+Up" = "window-focus-up"
-"Mod+Down" = "window-focus-down"
+"Mod+Up" = "window-focus-or-output-up"
+"Mod+Down" = "window-focus-or-output-down"
 "Mod+Left" = "window-focus-left"
 "Mod+Right" = "window-focus-right"
 "Mod+MouseBack" = "window-focus-left"
@@ -95,7 +94,8 @@
 # === Power (monitors) ===
 "Mod+Shift+P" = "dpms-off"
 
-# === Noctalia shell ===
+# === Switchers ===
+"Mod+Tab" = { action = "overview-toggle", repeat = false }
 "Alt+Tab" = "spawn:noctalia msg window-switcher"
 
 # === Audio (allow when locked) ===
