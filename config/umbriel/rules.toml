@@ -28,3 +28,9 @@ default_floating = true
 match.app_id = "^dev.zed.Zed$"
 match.title = "Zed —"
 default_floating = true
+
+# Ghostty
+[[window_rule]]
+match.app_id = "^com.mitchellh.ghostty$"
+blur = true
+blur_optimized = false

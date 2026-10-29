@@ -32,8 +32,8 @@ opaque_fullscreen = true
 [appearance.blur]
 enabled = true
 optimized = false
-passes = 1
-radius = 4
+passes = 2
+radius = 1
 noise = 0.02
 brightness = 0.9
 contrast = 0.9

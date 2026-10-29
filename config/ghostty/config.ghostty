@@ -5,3 +5,6 @@ font-family = Maple Mono
 window-padding-x = 4
 window-padding-y = 4
 window-padding-color = extend
+cursor-opacity = 0.85
+cursor-style = bar
+background-opacity = 0.97
