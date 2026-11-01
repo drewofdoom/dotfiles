@@ -25,7 +25,7 @@ PROTON_PASS_LINUX_KEYRING = "dbus"
 [appearance]
 prefer_no_csd = true
 border_width = 2
-corner_radius = 10
+corner_radius = 16
 drag_opacity = 0.95
 opaque_fullscreen = true
 
