@@ -19,7 +19,6 @@ packages:
     - lua
     - opus
     - sox
-    - tldr
     - ugrep
     - unar
     - unzip
@@ -29,10 +28,7 @@ packages:
     - homebrew/cask/font-maple-mono
   flatpak:
     - org.telegram.desktop
-    - dev.vencord.Vesktop
-    - app.zen_browser.zen
     - com.protonvpn.www
     - com.slack.Slack
-    - io.github.lullabyX.sone
     - net.nokyan.Resources
 ...
