@@ -1,4 +1,4 @@
-# Layer rules
+# --- Layer rules ---
 [[layer_rule]]
 match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
 blur = true
@@ -7,6 +7,11 @@ blur_popups = true
 blur_optimized = false
 
 # --- General Window Rules ---
+# Focus ring for focused windows
+[[window_rule]]
+match.is_focused = true
+border_width = 2
+
 # Floating by app id
 [[window_rule]]
 match.app_id = "^(org.gnome.DejaDup|Emulator|zenity|xdg-desktop-portal|org.pulseaudio.pavucontrol|dev.noctalia.Noctalia|org.gnome.Decibels)$"

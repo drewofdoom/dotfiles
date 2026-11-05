@@ -1,5 +1,6 @@
 if status is-interactive
 # Commands to run in interactive sessions can go here
+    set -U fish_greeting ""
 
     # Use the systemd socket-activated agent (ssh-agent.socket, enabled for this
     # user) instead of spawning an agent per shell. GNOME normally exports
