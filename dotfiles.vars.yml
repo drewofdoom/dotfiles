@@ -19,6 +19,7 @@ packages:
     - lua
     - opus
     - sox
+    - starship
     - ugrep
     - unar
     - unzip
