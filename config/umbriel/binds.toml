@@ -3,7 +3,7 @@
 # Launchers
 "Mod+Return" = "spawn ghostty"
 "Mod+Space" = "spawn noctalia msg panel-toggle launcher"
-"Mod+B" = "spawn brave-browser"
+"Mod+B" = "spawn helium"
 "Mod+E" = "spawn nautilus"
 
 # Actions
