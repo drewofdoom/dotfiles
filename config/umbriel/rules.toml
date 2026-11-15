@@ -10,7 +10,7 @@ blur_optimized = false
 # Focus ring for focused windows
 [[window_rule]]
 match.is_focused = true
-border_width = 2
+border_width = 1
 
 # Floating by app id
 [[window_rule]]
