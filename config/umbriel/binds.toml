@@ -4,7 +4,7 @@
 "Mod+Return" = "spawn ghostty"
 "Mod+Space" = "spawn noctalia msg panel-toggle launcher"
 "Mod+B" = "spawn helium"
-"Mod+E" = "spawn nautilus"
+"Mod+E" = "spawn luciole"
 
 # Actions
 "Mod+C" = "column-center"
